@@ -99,3 +99,6 @@ _______________________________________________
 _______________________________________________
 * Discord que me ajudou
 https://discord.universohackintosh.com.br/
+_______________________________________________
+* YOUTUBE CANAL RECOMENDADO
+https://www.youtube.com/@UniversoHackintosh
