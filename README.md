@@ -97,7 +97,7 @@ _______________________________________________
 * https://github.com/luchina-gabriel/BASE-EFI-INTEL-DESKTOP-11THGEN-ROCKET-LAKE
 * https://www.olarila.com/topic/5676-hackintosh-efi-folder-for-all-chipsets-clover-and-opencore-macos
 _______________________________________________
-* Discord que me ajudou
+* Discord para ajuda
 https://discord.universohackintosh.com.br/
 _______________________________________________
 * YOUTUBE CANAL RECOMENDADO
