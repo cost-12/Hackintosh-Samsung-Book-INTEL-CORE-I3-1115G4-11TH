@@ -9,6 +9,7 @@ _________________________________________________
 * Estou aqui para compartilhar minha EFI base do Samsung Book de 11th geração
 - A EFI que estou disponibilizando não está totalmente configurada, pode apresentar erros, pois foi criada com base no Catalina, são necessárias correções no Wifi, Som, e trackpad para uso em determinadas versões do MacOS
 * Email para tirar dúvida: hackinthc@gmail.com
+* OBS:Vou tentar realizar melhorias na EFI sempre que possível
 _________________________________________________
 * Especificaçãoes da minha máquina:
 Marca
