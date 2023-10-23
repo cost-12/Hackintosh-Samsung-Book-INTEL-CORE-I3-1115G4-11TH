@@ -88,8 +88,6 @@ Alimentação - Fonte
 40W
 _______________________________________________
 * Funções com erro:
-* Trackpad
-* MicroSD Card Reader
 * Iris G4 não está totalmente ativada
 _______________________________________________
 * Referências
