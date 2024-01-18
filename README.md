@@ -11,7 +11,7 @@ _________________________________________________
 * Email para tirar dúvida: hackinthc@gmail.com
 * OBS: Vou tentar realizar melhorias na EFI sempre que possível
 _________________________________________________
-* Especificaçãoes da minha máquina:
+# Especificaçãoes da minha máquina:
 - Marca
 Samsung
 - Modelo
@@ -37,17 +37,17 @@ Intel Iris UHD Graphics G4
 - Conexões
 1 USB-C - 1 USB 3.0 - 1 USB 2.0 - 1 HDMI
 _______________________________________________
-* Funções com erro:
+# Funções com erro:
 - Iris G4 não está totalmente ativada
 _______________________________________________
-* Referências
+# Referências
 - https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html
 - https://dortania.github.io/Getting-Started-With-ACPI/
 - https://github.com/luchina-gabriel/BASE-EFI-INTEL-DESKTOP-11THGEN-ROCKET-LAKE
 - https://www.olarila.com/topic/5676-hackintosh-efi-folder-for-all-chipsets-clover-and-opencore-macos
 _______________________________________________
-* Discord para ajuda
+# Discord para ajuda
 https://discord.universohackintosh.com.br/
 _______________________________________________
-* YOUTUBE CANAL RECOMENDADO
+# YOUTUBE CANAL RECOMENDADO
 https://www.youtube.com/@UniversoHackintosh
