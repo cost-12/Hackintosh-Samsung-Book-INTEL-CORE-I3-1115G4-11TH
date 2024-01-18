@@ -5,13 +5,13 @@ Release date: 11/12/2023
 
 ![Captura de Tela 2024-01-17 às 21 10 21](https://github.com/cost-12/Hackintosh-Samsung-Book-INTEL-CORE-I3-1115G4-11TH/assets/124941175/b20d9859-100a-4ad0-beab-e3a571625ec1)
 _________________________________________________
-* Olá meus caros!
+* Olá!
 * Estou aqui para compartilhar minha EFI base do Samsung Book de 11th geração
-- A EFI que estou disponibilizando não está totalmente configurada, pode apresentar erros, pois foi criada com base no Catalina, são necessárias correções no Wifi, Som, e trackpad para uso em determinadas versões do MacOS
+- A EFI que estou disponibilizando não está totalmente configurada, pode apresentar erros, pois foi criada com base no Catalina, são necessárias correções no Wifi, Som e trackpad para uso em determinadas versões do MacOS
 * Email para tirar dúvida: hackinthc@gmail.com
 * OBS: Vou tentar realizar melhorias na EFI sempre que possível
 _________________________________________________
-# Especificaçãoes da minha máquina:
+# Especificações da minha máquina:
 - Marca
 Samsung
 - Modelo
