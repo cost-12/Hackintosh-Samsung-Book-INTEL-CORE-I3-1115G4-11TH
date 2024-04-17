@@ -11,31 +11,17 @@ _________________________________________________
 * Email para tirar dúvida: hackinthc@gmail.com
 * OBS: Vou tentar realizar melhorias na EFI sempre que possível
 _________________________________________________
-# Especificações da minha máquina:
-- Marca
-Samsung
-- Modelo
-NP550XDA-KV3BR
-- Linha
-Samsung Book
-- Processador
-Intel Core i3-1115G4 11° geração
-- Especificações do processador - Velocidade / Frequência aumentada
-4.1GHz
-- Memória RAM
-12GB
-- Especificações da memória RAM - Expansível
-Até 32GB
-- Especificações da memória RAM - Barramento da memória
-DDR4
-- Especificações da memória RAM - Clock da memória
-3200MHz
-- Armazenamento
-SSD Marca-china SATA de 256GB
-- Especificações da placa de vídeo - Modelo
-Intel Iris UHD Graphics G4
-- Conexões
-1 USB-C - 1 USB 3.0 - 1 USB 2.0 - 1 HDMI
+## Especificações da minha máquina
+| Nome | Descrição |
+| - | - |
+| CPU | Intel 11th Gen Tiger Lake Core i3-1115G4 4.1 GHz |
+| Chipsets | Intel Tiger Lake-LP |
+| Graphics | Intel UHD Graphics G4 |
+| Mémoria | DDR4 3200 MHz 12GB |
+| Som | Realtek HD Audio ALC 897 |
+| Wi-Fi / Bluetooth | Intel Wi-Fi 6 AX201 160MHz |
+| TouchPad | Samsung I2C Precision TouchPad (SPTP, IOName : ATML3000/ELAN0B00) |
+| BIOS | AMI Aptio Setup Utility (Version P21CFD) |
 _______________________________________________
 # Funções com erro:
 - Iris G4 não está totalmente ativada
@@ -45,6 +31,7 @@ _______________________________________________
 - https://dortania.github.io/Getting-Started-With-ACPI/
 - https://github.com/luchina-gabriel/BASE-EFI-INTEL-DESKTOP-11THGEN-ROCKET-LAKE
 - https://www.olarila.com/topic/5676-hackintosh-efi-folder-for-all-chipsets-clover-and-opencore-macos
+- https://github.com/lshbluesky/Samsung-NT750XDA-KF59U-Hackintosh
 _______________________________________________
 # Discord para ajuda
 https://discord.universohackintosh.com.br/
