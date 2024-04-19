@@ -21,7 +21,7 @@ _________________________________________________
 | Som | Realtek HD Audio ALC 897 |
 | Wi-Fi / Bluetooth | Intel Wi-Fi 6 AX201 160MHz |
 | TouchPad | Samsung I2C Precision TouchPad (SPTP, IOName : ATML3000/ELAN0B00) |
-| BIOS | AMI Aptio Setup Utility (Version P21CFD) |
+| BIOS | AMI Aptio Setup Utility (Version P21CFB) |
 _______________________________________________
 # Funções com erro:
 - Iris G4 não está totalmente ativada
