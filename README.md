@@ -7,7 +7,7 @@ Release date: 11/12/2023
 _________________________________________________
 * Olá!
 * Estou aqui para compartilhar minha EFI base do Samsung Book de 11th geração
-- A EFI que estou disponibilizando não está totalmente configurada, pode apresentar erros, pois foi criada com base no Catalina, são necessárias correções no Wifi, Som e trackpad para uso em determinadas versões do MacOS
+- A EFI que estou disponibilizando não está totalmente configurada, pode apresentar erros, são necessárias correções no Wifi e Som para uso em determinadas versões do MacOS
 * Email para tirar dúvida: hackinthc@gmail.com
 * OBS: Vou tentar realizar melhorias na EFI sempre que possível
 _________________________________________________
