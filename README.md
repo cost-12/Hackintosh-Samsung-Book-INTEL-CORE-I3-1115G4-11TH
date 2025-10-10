@@ -1,13 +1,12 @@
 # Hackintosh-Samsung-Book-INTEL-CORE-I3-1115G4-11TH
 BASE EFI GABRIEL LUCHINA
-Opencore version: 1.0.1
-Release date: 01/08/2024
+Opencore version: 1.0.5
+Release date: 10/10/2025
 
 ![Captura de Tela 2024-05-03 às 22 27 36](https://github.com/cost-12/Hackintosh-Samsung-Book-INTEL-CORE-I3-1115G4-11TH/assets/124941175/a9a25b24-b0f2-4273-ac02-963d56e7c684)
 _________________________________________________
 * Olá!
 * Estou aqui para compartilhar minha EFI base do Samsung Book de 11th geração
-- A EFI que estou disponibilizando não está totalmente configurada, pode apresentar erros, são necessárias correções no Wifi e Som para uso em determinadas versões do MacOS
 * Email para tirar dúvida: hackinthc@gmail.com
 * OBS: Vou tentar realizar melhorias na EFI sempre que possível
 _________________________________________________
