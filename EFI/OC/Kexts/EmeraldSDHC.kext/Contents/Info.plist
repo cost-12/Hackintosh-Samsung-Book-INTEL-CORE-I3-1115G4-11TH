@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>21H1015</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>EmeraldSDHC</string>
+	<key>CFBundleIdentifier</key>
+	<string>fish.goldfish64.EmeraldSDHC</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>EmeraldSDHC</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1.2</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>0.1.2</string>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>13F100</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
+	<key>DTPlatformVersion</key>
+	<string>12.3</string>
+	<key>DTSDKBuild</key>
+	<string>21E226</string>
+	<key>DTSDKName</key>
+	<string>macosx12.3</string>
+	<key>DTXcode</key>
+	<string>1341</string>
+	<key>DTXcodeBuild</key>
+	<string>13F100</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>EmeraldSDHC</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>fish.goldfish64.EmeraldSDHC</string>
+			<key>IOClass</key>
+			<string>EmeraldSDHC</string>
+			<key>IOPCIClassMatch</key>
+			<string>0x08050000 0x08050100</string>
+			<key>IOProbeScore</key>
+			<integer>1000</integer>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>Protocol Characteristics</key>
+			<dict>
+				<key>Physical Interconnect</key>
+				<string>Secure Digital</string>
+				<key>Physical Interconnect Location</key>
+				<string>Internal</string>
+			</dict>
+		</dict>
+		<key>EmeraldSDHC ACPI</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>fish.goldfish64.EmeraldSDHC</string>
+			<key>IOClass</key>
+			<string>EmeraldSDHC</string>
+			<key>IONameMatch</key>
+			<string>PNP0D40</string>
+			<key>IOProbeScore</key>
+			<integer>1000</integer>
+			<key>IOProviderClass</key>
+			<string>IOACPIPlatformDevice</string>
+			<key>Protocol Characteristics</key>
+			<dict>
+				<key>Physical Interconnect</key>
+				<string>Secure Digital</string>
+				<key>Physical Interconnect Location</key>
+				<string>Internal</string>
+			</dict>
+		</dict>
+		<key>EmeraldSDHCBlockStorageDevice</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>fish.goldfish64.EmeraldSDHC</string>
+			<key>IOClass</key>
+			<string>EmeraldSDHCBlockStorageDevice</string>
+			<key>IOProviderClass</key>
+			<string>EmeraldSDHCSlot</string>
+		</dict>
+	</dict>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.6</string>
+	<key>NSHumanReadableCopyright</key>
+	<string></string>
+	<key>OSBundleCompatibleVersion</key>
+	<string>0.1.2</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.iokit.IOACPIFamily</key>
+		<string>1.0</string>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>1.0</string>
+		<key>com.apple.iokit.IOStorageFamily</key>
+		<string>1.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>8.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>8.0.0</string>
+		<key>com.apple.kpi.mach</key>
+		<string>8.0.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>
