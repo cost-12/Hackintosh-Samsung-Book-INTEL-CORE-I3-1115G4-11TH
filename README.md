@@ -13,7 +13,7 @@ This project is aimed at beginners and intermediate Hackintosh users who want a 
 ⚠️ Important:
 This EFI is a work in progress. Certain components—especially the Intel UHD G4 iGPU—are not fully functional on macOS due to lack of official drivers. Expect limitations.
 
-For support, questions or contributions:
+- For support, questions or contributions:
 📧 hackinthc@gmail.com
 _________________________________________________
 ## System Specifications
@@ -51,14 +51,10 @@ ________________________________________________
 Currently QE/CI hardware acceleration is unavailable because Apple never released Kexts for Gen12 Xe architecture.
 
 Consequences:
-
-Laggy animations
-
-Poor performance in Mission Control
-
-No HEVC/H.264 hardware encoding
-
-Reduced battery life
+- Laggy animations
+- Poor performance in Mission Control
+- No HEVC/H.264 hardware encoding
+- Reduced battery life
 
 Community work is ongoing to develop experimental drivers.
 
