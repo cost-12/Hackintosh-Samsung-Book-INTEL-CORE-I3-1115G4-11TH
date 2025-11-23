@@ -84,10 +84,12 @@ _______________________________________________
 📚 References & Credits
 - https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html
 - https://dortania.github.io/Getting-Started-With-ACPI/
-- https://github.com/luchina-gabriel/BASE-EFI-INTEL-DESKTOP-11THGEN-ROCKET-LAKE
+- https://github.com/luchina-gabriel
 - https://olarila.com/
 - https://github.com/lshbluesky/Samsung-NT750XDA-KF59U-Hackintosh
 - https://github.com/joevt/WhateverGreen
+- https://github.com/becoolio
+- https://www.insanelymac.com/forum/profile/53253-jalavoui/
 _______________________________________________
 💬 Community & Support
 
