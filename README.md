@@ -77,9 +77,9 @@ MacBookAir9,1 (stable on iGPU-only laptops)
 
 - Required Tools:
 
-GenSMBIOS
-ProperTree
-USB mapping tool (included)
+- GenSMBIOS
+- ProperTree
+- USB mapping tool
 _______________________________________________
 📚 References & Credits
 - https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html
