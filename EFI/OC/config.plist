@@ -204,6 +204,14 @@
 				<key>Path</key>
 				<string>SSDT-S3.aml</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-USB-Reset.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-USB-Reset.aml</string>
+			</dict>
 		</array>
 		<key>Delete</key>
 		<array>
@@ -998,7 +1006,7 @@
 		<key>Quirks</key>
 		<dict>
 			<key>AllowRelocationBlock</key>
-			<true/>
+			<false/>
 			<key>AvoidRuntimeDefrag</key>
 			<true/>
 			<key>ClearTaskSwitchBit</key>
@@ -1020,13 +1028,13 @@
 			<key>ForceBooterSignature</key>
 			<false/>
 			<key>ForceExitBootServices</key>
-			<true/>
+			<false/>
 			<key>ProtectMemoryRegions</key>
 			<false/>
 			<key>ProtectSecureBoot</key>
 			<false/>
 			<key>ProtectUefiServices</key>
-			<true/>
+			<false/>
 			<key>ProvideCustomSlide</key>
 			<true/>
 			<key>ProvideMaxSlide</key>
@@ -1197,7 +1205,7 @@
 				<key>model</key>
 				<string>Tiger Lake-LP SPI Controller</string>
 			</dict>
-			<key>#Post-install activation##PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<key>#PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>rebuild-device-tree</key>
 				<data>AQAAAA==</data>
@@ -1285,9 +1293,9 @@
 				<string>VGA compatible controller</string>
 				<key>device-id</key>
 				<data>XIoAAA==</data>
-				<key>#AAPL00,override-no-connect</key>
-				<data>AP///////wAJ5RIIAAAAAB8cAQSlIhN4AwmAlVxakSkhUFQAAAABAQEBAQEBAQEBAQEBAQEBAzqANnE4HkAwIDYAWMIQAAAaAAAAAAAAAAAAAAAAAAAAAAAAAAAA/gBCT0UgQ1EKICAgICAgAAAA/gBOVDE1NkZITS1ONjEKAO0=</data>
 				<key>AAPL00,override-no-connect</key>
+				<data>AP///////wAJ5RIIAAAAAB8cAQSlIhN4AwmAlVxakSkhUFQAAAABAQEBAQEBAQEBAQEBAQEBAzqANnE4HkAwIDYAWMIQAAAaAAAAAAAAAAAAAAAAAAAAAAAAAAAA/gBCT0UgQ1EKICAgICAgAAAA/gBOVDE1NkZITS1ONjEKAO0=</data>
+				<key>##AAPL00,override-no-connect</key>
 				<data>AP///////wAGEPKcAAAAABoVAQSVGg54Au8Fl1dUkiciUFQAAAABAQEBAQEBAQEBAQEBAQEBAzqANnE4HkAwIDYAWMIQAAAaAAAA/ABDb2xvciBMQ0QKICAgAAAA/QA4TB5TEQAKICAgICAgAAAA/gBOVDE1NkZITS1ONjEKAEY=</data>
 				<key>dpcd-max-link-rate</key>
 				<data>CgAAAA==</data>
@@ -1347,20 +1355,30 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)#Disable it after installation</key>
 			<dict>
+				<key>AAPL,ig-platform-id</key>
+				<data>AABcig==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
+				<key>complete-modeset</key>
+				<data>AQAAAA==</data>
 				<key>device-id</key>
 				<data>XIoAAA==</data>
 				<key>#device_type</key>
 				<string>VGA compatible controller</string>
+				<key>enable-backlight-registers-fix</key>
+				<data>AQAAAA==</data>
+				<key>enable-cdclk-frequency-fix</key>
+				<data>AQAAAA==</data>
+				<key>enable-dbuf-early-optimizer</key>
+				<data>AQAAAA==</data>
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
-				<key>enable-dbuf-early-optimizer</key>
-				<data>AQAAAA==</data>
+				<key>#model</key>
+				<string>Intel Iris Plus Graphics G4 (Ice Lake)</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1392,13 +1410,139 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
+				<string>VirtualSMC.kext</string>
+				<key>Comment</key>
+				<string>VirtualSMC.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/VirtualSMC</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>SMCProcessor.kext</string>
+				<key>Comment</key>
+				<string>SMCProcessor.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/SMCProcessor</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>SMCSuperIO.kext</string>
+				<key>Comment</key>
+				<string>SMCSuperIO.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/SMCSuperIO</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>SMCLightSensor.kext</string>
+				<key>Comment</key>
+				<string>SMCLightSensor.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/SMCLightSensor</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>SMCBatteryManager.kext</string>
+				<key>Comment</key>
+				<string>SMCBatteryManager.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/SMCBatteryManager</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
 				<string>WhateverGreen.kext</string>
 				<key>Comment</key>
 				<string>WhateverGreen.kext</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/WhateverGreen</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>NootedBlue.kext</string>
+				<key>Comment</key>
+				<string>NootedBlue.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/NootedBlue</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>DisplayMergeNub.kext</string>
+				<key>Comment</key>
+				<string>DisplayMergeNub.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/DisplayMergeNub</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1716,24 +1860,6 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>VirtualSMC.kext</string>
-				<key>Comment</key>
-				<string>VirtualSMC.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VirtualSMC</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext</string>
 				<key>Comment</key>
 				<string>VoodooPS2Controller.kext</string>
@@ -1993,78 +2119,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/HibernationFixup</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>SMCBatteryManager.kext</string>
-				<key>Comment</key>
-				<string>SMCBatteryManager.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/SMCBatteryManager</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>SMCLightSensor.kext</string>
-				<key>Comment</key>
-				<string>SMCLightSensor.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/SMCLightSensor</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>SMCProcessor.kext</string>
-				<key>Comment</key>
-				<string>SMCProcessor.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/SMCProcessor</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>SMCSuperIO.kext</string>
-				<key>Comment</key>
-				<string>SMCSuperIO.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/SMCSuperIO</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -2913,6 +2967,10 @@
 				<string>boot-args</string>
 				<string>ForceDisplayRotationInEFI</string>
 				<string>prev-lang:kbd</string>
+				<string>run-efi-updater</string>
+				<string>SystemAudioVolume</string>
+				<string>bluetoothExternalDongleFailed</string>
+				<string>bluetoothInternalControllerInfo</string>
 			</array>
 		</dict>
 		<key>LegacyOverwrite</key>

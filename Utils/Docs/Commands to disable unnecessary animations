@@ -1,0 +1,17 @@
+#Comandos para desativar animações denecessárias;
+
+
+- Desativa Efeitos de Sombra em Capturas de Tela:
+
+defaults write com.apple.screencapture disable-shadow -bool true
+
+
+- Desativa Efeitos de Janela:
+
+defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+defaults write -g NSWindowResizeTime -float 0.001
+
+
+- Dasativar Efeito de Miniatura em Minimizar:
+
+defaults write com.apple.dock minimize-to-application -bool true; killall Dock

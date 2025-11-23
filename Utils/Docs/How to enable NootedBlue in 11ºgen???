@@ -1,0 +1,70 @@
+How to enable NootedBlue in 11ºgen???
+
+⚙️ Autorizações e boot args
+
+    Preferências do Sistema > Segurança e Privacidade > Geral: → Clique em Permitir para autorizar o desenvolvedor da kext. Sem isso, ela não carrega.
+
+
+    Desativar Gatekeeper:
+    bash
+    sudo spctl --master-disable
+
+
+🔄 Reconstrução de cache
+
+    Apague o cache auxiliar:
+    bash
+    sudo rm -f /Library/KernelCollections/AuxiliaryKernelExtensions.kc
+
+🔧 Instalação dos kexts modificados
+
+    Local correto: /Library/Extensions (L/E). → Nunca em /System/Library/Extensions, pois o volume do sistema é somente leitura (SSV).
+
+  1º kext; HookCase.kext
+
+    - Permissões antes de mover:
+
+		bash
+		sudo chmod -R 755 /Users/(Seu usuário)/Downloads/HookCase.kext
+
+		sudo chown -R root:wheel /Users/(Seu usuário)/Downloads/HookCase.kext
+
+	- Mover para L/E:
+
+		bash
+		sudo cp -R /Users/(Seu Usuário)/Downloads/HookCase.kext /Library/Extensions	
+
+	- Replicar a propriedade de destino:
+
+		bash
+		sudo chown -R root:wheel /Library/Extensions/HookCase.kext
+
+  2º kext; AppleIntelTGLGraphics.kext e suas variantes
+
+    - Permissões antes de mover:
+    
+	    bash
+	    sudo chmod -R 755 /caminho/para/kexts/Apple*.kext
+		sudo chown -R root:wheel /caminho/para/kexts/Apple*.kext
+
+	- Mover para L/E:
+		
+		1º
+		bash
+		EX: sudo cp -R /Users/(Seu Usuário)/Downloads/test/sle/Apple* /Library/Extensions
+		
+		2º
+		bash
+		EX: sudo cp -R /Users/(Seu usuário)/Downloads/test/le/Apple* /Library/Extensions
+
+	- Reaplicar propriedade no destino:
+		bash
+		sudo chown -R root:wheel /Library/Extensions/*.kext
+
+!!!Você precisa usar o FixEDID para corrigir AAPL00,override-no-connect do seu Dumper do Darwin!!!
+
+Finalize:
+bash
+sudo touch /Library/Extensions
+
+sudo reboot
