@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>com.anomy.driver.FakeIrisXEFramebuffer</string>
+	<key>CFBundleExecutable</key>
+	<string>FakeIrisXEFramebuffer</string>
+	<key>CFBundleName</key>
+	<string>FakeIrisXEFramebuffer</string>
+	<key>CFBundleVersion</key>
+	<string>11.7</string>
+	<key>CFBundleShortVersionString</key>
+	<string>11.7</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>OSBundleCompatibleVersion</key>
+	<string>11.7</string>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>FakeIrisXEFramebuffer</key>
+		<dict>
+			<key>IOClass</key>
+			<string>FakeIrisXEFramebuffer</string>
+			<key>IOProviderClass</key>
+			<string>IOPCIDevice</string>
+			<key>IOPCIPrimaryMatch</key>
+			<string>0x9A498086</string>
+			<key>IONameMatch</key>
+			<string>GFX0</string>
+			<key>built-in</key>
+			<true/>
+			<key>AAPL,HasPanel</key>
+			<true/>
+			<key>IOUserClientClass</key>
+			<string>IOFramebufferUserClient</string>
+			<key>IOKitDebug</key>
+			<integer>65535</integer>
+			<key>IOFBNoDefaultDepth</key>
+			<true/>
+
+<key>IOFBDependentIndex</key>
+<integer>0</integer>
+
+<key>IOFBNoGamma</key>
+<true/>
+
+<key>IOFBNoDeepBright</key>
+<true/>
+
+<key>IOFBNoCLUT</key>
+<true/>
+
+<key>IOFBNoDefaultDepth</key>
+<true/>
+
+<key>IOFBKillScreenLock</key>
+<true/>
+
+
+
+			<key>IOProbeScore</key>
+			<integer>50000</integer>
+		</dict>
+		<key>FakeIrisXEAccelerator</key>
+		<dict>
+			<key>IOClass</key>
+			<string>FakeIrisXEAccelerator</string>
+			<key>IOProviderClass</key>
+			<string>FakeIrisXEFramebuffer</string>
+			<key>IONameMatch</key>
+			<string>FakeIrisXEFramebuffer</string>
+			<key>IOMatchCategory</key>
+			<string>IOAccelerator</string>
+			<key>IOUserClientClass</key>
+			<string>FakeIrisXEAcceleratorUserClient</string>
+			<key>MetalPluginClassName</key>
+			<string>FakeIrisXEAccelerator</string>
+			<key>IOGVAHEVCDecode</key>
+			<true/>
+			<key>IOGVAGPUSupported</key>
+			<true/>
+			<key>MetalPlugin</key>
+			<true/>
+			<key>IOGVACodec</key>
+			<true/>
+			<key>MetalSupported</key>
+			<true/>
+		</dict>
+		<key>FakeIrisXEAccelDevice</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.anomy.driver.FakeIrisXEFramebuffer</string>
+			<key>IOProviderClass</key>
+			<string>FakeIrisXEFramebuffer</string>
+			<key>IONameMatch</key>
+			<string>FakeIrisXEFramebuffer</string>
+			<key>IOClass</key>
+			<string>FakeIrisXEAccelDevice</string>
+			<key>IOUserClientClass</key>
+			<string>FakeIrisXEAcceleratorUserClient</string>
+			<key>MetalPluginClassName</key>
+			<string>FakeIrisXEAccelerator</string>
+			<key>IOGVACapabilities</key>
+			<string>basic</string>
+		</dict>
+	</dict>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>com.apple.kpi.libkern</key>
+		<string>20.6.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>20.6.0</string>
+		<key>com.apple.kpi.unsupported</key>
+		<string>20.6.0</string>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>2.0.0</string>
+		<key>com.apple.iokit.IOGraphicsFamily</key>
+		<string>585.2</string>
+		<key>com.apple.iokit.IOACPIFamily</key>
+		<string>1.0.0</string>
+		<key>com.apple.iokit.IOReportFamily</key>
+		<string>1.0.0</string>
+		<key>com.apple.iokit.IOHIDFamily</key>
+		<string>1.0.0</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,27 @@
+#Comandos para desativar animações desnecessárias;
+
+
+- Desativa Efeitos de Sombra em Capturas de Tela:
+
+defaults write com.apple.screencapture disable-shadow -bool true
+
+
+- Desativa Efeitos de Janela:
+
+defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+defaults write -g NSWindowResizeTime -float 0.001
+
+
+- Desativar aceleração do Mouse:
+
+	Mouse;
+	defaults write .GlobalPreferences com.apple.mouse.scaling -1
+
+	Trackpad;
+	defaults write .GlobalPreferences com.apple.trackpad.scaling -1
+
+
+
+- Desativar Efeito de Miniatura em Minimizar:
+
+defaults write com.apple.dock minimize-to-application -bool true; killall Dock
