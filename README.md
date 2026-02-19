@@ -84,8 +84,7 @@ _______________________________________________
 - MacBookAir9,1 (stable on iGPU-only laptops)
 - MacBookPro16,2 (Note: Display corrections are needed)
 
-📝 Note: 
-    Modifying the SMBIOS also necessitates modifying the USBMap, in addition to CPUFriend profiles.
+📝 Note: Modifying the SMBIOS also necessitates modifying the USBMap, in addition to CPUFriend profiles.
 
 ### Required Tools:
 
