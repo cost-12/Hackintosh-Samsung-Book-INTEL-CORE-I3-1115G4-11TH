@@ -81,8 +81,8 @@ _______________________________________________
 
 ### SMBIOS Used:
 
-MacBookAir9,1 (stable on iGPU-only laptops)
-MacBookPro16,2 (Note: Display corrections are needed)
+- MacBookAir9,1 (stable on iGPU-only laptops)
+- MacBookPro16,2 (Note: Display corrections are needed)
 
 ### Required Tools:
 
