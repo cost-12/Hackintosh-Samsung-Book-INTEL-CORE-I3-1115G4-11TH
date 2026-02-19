@@ -65,8 +65,8 @@ Consequences:
 Community work is ongoing to develop experimental drivers.
 
 Discussion Thread:
-https://www.insanelymac.com/forum/topic/358305-iris-xe-igpu-on-tiger-lake/
-https://github.com/pawan295/Appleinteltgldriver.kext
+- https://www.insanelymac.com/forum/topic/358305-iris-xe-igpu-on-tiger-lake/
+- https://github.com/pawan295/Appleinteltgldriver.kext
 _______________________________________________
 
 🛠️ Installation Notes
