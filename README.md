@@ -47,7 +47,7 @@ _______________________________________________
 | HDMI Output         | ✔️ Working (limited)                         |
 
 ________________________________________________
-📝 To activate the graphics drivers, modifications are required using ![RU.efi](https://ruexe.blogspot.com/), specifically CFG Lock, and DVMT Pre-allocated. More information can be found here: 
+📝 To activate the graphics drivers, modifications are required using [RU.efi](https://ruexe.blogspot.com/), specifically CFG Lock, and DVMT Pre-allocated. More information can be found here: 
 - https://olarila.com/topic/40092-how-to-fixing-your-dvmt-pre-allocated-for-the-perfect-hackintosh/
 - https://github.com/cost-12/Hackintosh-Samsung-Book-INTEL-CORE-I3-1115G4-11TH/issues/1#issuecomment-3391430613
 
@@ -103,6 +103,7 @@ _______________________________________________
 - https://olarila.com/
 - https://github.com/lshbluesky/Samsung-NT750XDA-KF59U-Hackintosh
 - https://github.com/joevt/WhateverGreen
+- https://github.com/pawan295/Appleinteltgldriver.kext/releases
 - https://github.com/becoolio
 - https://www.insanelymac.com/forum/profile/53253-jalavoui/
 _______________________________________________
