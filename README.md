@@ -25,6 +25,7 @@ _________________________________________________
 | **iGPU**              | Intel UHD Graphics G4 (Iris Xe architecture, partially supported) |
 | **Memory**            | 12 GB DDR4 3200 MHz                                               |
 | **Storage**           | SSD SATA 256GB                                                    |
+| **SD/MMC**            | O2 Micro, Inc. OZ711 SD/MMC Card Reader Controller                |
 | **Audio**             | Realtek ALC897                                                    |
 | **Wi-Fi / Bluetooth** | Intel Wi-Fi 6 AX201 / 9462                                        |
 | **Touchpad**          | Samsung I2C Precision TouchPad (ATML3000 / ELAN0B00)              |
