@@ -1,8 +1,12 @@
 How to enable NootedBlue in 11ºgen???
 
+
+
 - NootedBlue não pode ser ativo junto com Whatevergreen
 - O bootarg -igfxvesa deve ser removido após a instalação
 - As propriedades da IGPU devem ser alteradas de acordo com a indicação no config.plist
+
+
 
 ⚙️ Autorizações e boot args
 
@@ -10,6 +14,7 @@ How to enable NootedBlue in 11ºgen???
 
 
     Desativar Gatekeeper:
+    
     bash
     sudo spctl --master-disable
 
@@ -17,74 +22,92 @@ How to enable NootedBlue in 11ºgen???
 🔄 Reconstrução de cache
 
     Apague o cache auxiliar:
-    bash
-    sudo rm -f /Library/KernelCollections/AuxiliaryKernelExtensions.kc
+    
+     bash
+     sudo rm -f /Library/KernelCollections/AuxiliaryKernelExtensions.kc
+
 
 🔧 Instalação dos kexts modificados
 
-    Local correto: /Library/Extensions (L/E). → Nunca em /System/Library/Extensions, pois o volume do sistema é somente leitura (SSV).
+    Local correto: /Library/Extensions (L/E). → Nunca em /System/Library/Extensions, pois o volume do sistema é somente leitura (SSV). Se tiver uma ferramenta que permita isso, deve funcionar.
+
 
   1º kext; HookCase.kext
 
     - Permissões antes de mover:
 
-		bash
-		sudo chmod -R 755 /Users/(Seu usuário)/Downloads/HookCase.kext
+	bash
+	sudo chmod -R 755 /Users/(Seu usuário)/Downloads/HookCase.kext
 
-		sudo chown -R root:wheel /Users/(Seu usuário)/Downloads/HookCase.kext
+	sudo chown -R root:wheel /Users/(Seu usuário)/Downloads/HookCase.kext
 
-	- Mover para L/E:
+    - Mover para L/E:
 
-		bash
-		sudo cp -R /Users/(Seu Usuário)/Downloads/HookCase.kext /Library/Extensions	
+	bash
+	sudo cp -R /Users/(Seu Usuário)/Downloads/HookCase.kext /Library/Extensions	
 
-	- Replicar a propriedade de destino:
+    - Replicar a propriedade de destino:
 
-		bash
-		sudo chown -R root:wheel /Library/Extensions/HookCase.kext
+	bash
+	sudo chown -R root:wheel /Library/Extensions/HookCase.kext
+
 
   2º kext; AppleIntelTGLGraphics.kext e suas variantes
 
     - Permissões antes de mover:
     
-	    bash
-	    sudo chmod -R 755 /caminho/para/kexts/Apple*.kext
-		sudo chown -R root:wheel /caminho/para/kexts/Apple*.kext
+	bash
+	sudo chmod -R 755 /caminho/para/kexts/Apple*.kext
+	sudo chown -R root:wheel /caminho/para/kexts/Apple*.kext
 
-		EX:
-		Ambas as variações;
+	EX:
 
-		1º
-		sudo chmod -R 755 /Users/(You User)/Downloads/sle_Internal/sle/Apple*.kext
-		sudo chmod -R 755 /Users/(You User)/Downloads/sle_Internal/le/Apple*.kext
+	1º
+	sudo chmod -R 755 /Users/(You User)/Downloads/sle_Internal/sle/Apple*.kext
+	sudo chmod -R 755 /Users/(You User)/Downloads/sle_Internal/le/Apple*.kext
 
-		2º
-		sudo chown -R root:wheel /Users/(You User)/Downloads/sle_Internal/sle/Apple*.kext
-		sudo chown -R root:wheel /Users/(You User)/Downloads/sle_Internal/le/Apple*.kext
+	2º
+	sudo chown -R root:wheel /Users/(You User)/Downloads/sle_Internal/sle/Apple*.kext
+	sudo chown -R root:wheel /Users/(You User)/Downloads/sle_Internal/le/Apple*.kext
 
-	- Mover para L/E:
+    - Mover para L/E:
 		
-		1º
-		bash
-		EX: sudo cp -R /Users/(Seu Usuário)/Downloads/test/sle/Apple* /Library/Extensions
+	1º
+	
+	bash
+	EX: sudo cp -R /Users/(Seu Usuário)/Downloads/test/sle/Apple* /Library/Extensions
 		
-		sudo cp -R /Users/(You User)/Downloads/sle_Internal/sle/Apple*.kext /Library/Extensions
+	sudo cp -R /Users/(You User)/Downloads/sle_Internal/sle/Apple*.kext /Library/Extensions
 
-		2º
-		bash
-		EX: sudo cp -R /Users/(Seu usuário)/Downloads/test/le/Apple* /Library/Extensions
 
-		sudo cp -R /Users/(You User)/Downloads/sle_Internal/le/Apple*.kext /Library/Extensions
+	2º
+	
+	bash
+	EX: sudo cp -R /Users/(Seu usuário)/Downloads/test/le/Apple* /Library/Extensions
 
-	- Reaplicar propriedade no destino:
-		bash
-		sudo chown -R root:wheel /Library/Extensions/*.kext
+	sudo cp -R /Users/(You User)/Downloads/sle_Internal/le/Apple*.kext /Library/Extensions
+
+
+    - Reaplicar propriedade no destino:
+		
+	bash
+	sudo chown -R root:wheel /Library/Extensions/*.kext
+
+
 
 !!!Você precisa usar o FixEDID para corrigir AAPL00,override-no-connect do seu Dumper do Darwin!!!
 
 !!!Todos os arquivos estão dentro da pasta kext internal em utils!!!
 
+
+Remove Possíveis erros na inicialização:
+
+bash
+sudo rm -rf /Library/Logs/* 
+
+
 Finalize:
+
 bash
 sudo touch /Library/Extensions
 

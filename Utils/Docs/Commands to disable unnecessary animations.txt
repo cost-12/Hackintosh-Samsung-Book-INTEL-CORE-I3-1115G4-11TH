@@ -1,4 +1,4 @@
-#Comandos para desativar animações desnecessárias;
+#Comandos para desativar animações desnecessárias by kidpixo GitHub;
 
 
 - Desativa Efeitos de Sombra em Capturas de Tela:
@@ -8,8 +8,50 @@ defaults write com.apple.screencapture disable-shadow -bool true
 
 - Desativa Efeitos de Janela:
 
-defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
-defaults write -g NSWindowResizeTime -float 0.001
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+- Desativar Efeitos de Rolagem:
+
+defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
+
+
+- Desabilitar Animação na abertura de documentos e exibição em tela cheia
+
+defaults write NSGlobalDomain NSDocumentRevisionsWindowTransformAnimation -bool false
+defaults write NSGlobalDomain NSToolbarFullScreenAnimationDuration -float 0.001
+
+
+- Disable animations when opening a Quick Look window.
+
+defaults write -g QLPanelAnimationDuration -float 0.001
+
+
+- Disable animation when opening the Info window in Finder (cmd⌘ + i).
+
+defaults write com.apple.finder DisableAllAnimations -bool true
+
+
+- Disable animations when you open an application from the Dock.
+
+defaults write com.apple.dock launchanim -bool false
+
+
+- Make all animations faster that are used by Mission Control.
+
+defaults write com.apple.dock expose-animation-duration -float 0.1
+
+
+- Disable the delay when you hide the Dock
+
+defaults write com.apple.Dock autohide-delay -float 0.1
+
+
+
+- Disable the standard delay in rendering a Web page.
+
+defaults write com.apple.Safari WebKitInitialTimedLayoutDelay 0.25
+
 
 
 - Desativar aceleração do Mouse:
@@ -25,3 +67,24 @@ defaults write -g NSWindowResizeTime -float 0.001
 - Desativar Efeito de Miniatura em Minimizar:
 
 defaults write com.apple.dock minimize-to-application -bool true; killall Dock
+
+#@@#
+
+
+defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+defaults write -g NSScrollAnimationEnabled -bool false
+defaults write -g NSWindowResizeTime -float 0.001
+defaults write -g QLPanelAnimationDuration -float 0
+defaults write -g NSScrollViewRubberbanding -bool false
+defaults write -g NSDocumentRevisionsWindowTransformAnimation -bool false
+defaults write -g NSToolbarFullScreenAnimationDuration -float 0
+defaults write -g NSBrowserColumnAnimationSpeedMultiplier -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock expose-animation-duration -float 0
+defaults write com.apple.dock springboard-show-duration -float 0
+defaults write com.apple.dock springboard-hide-duration -float 0
+defaults write com.apple.dock springboard-page-duration -float 0
+defaults write com.apple.finder DisableAllAnimations -bool true
+defaults write com.apple.Mail DisableSendAnimations -bool true
+defaults write com.apple.Mail DisableReplyAnimations -bool true

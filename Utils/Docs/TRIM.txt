@@ -1,0 +1,4 @@
+
+Aumentar a vida útil em SSD:
+
+sudo trimforce enable
