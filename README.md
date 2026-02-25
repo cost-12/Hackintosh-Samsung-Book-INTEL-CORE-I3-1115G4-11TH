@@ -37,7 +37,7 @@ _______________________________________________
 | Feature             | Status                                       |
 | ------------------- | -------------------------------------------- |
 | Booting macOS       | ✔️ Stable                                    |
-| Keyboard / Trackpad | ✔️ I2C supported with VoodooI2C              |
+| Keyboard / Trackpad | ✔️ Fn keys and I2C trackpad are working      |
 | Audio (ALC897)      | ✔️ Functional                                |
 | USB                 | ✔️ Mapped / Stable                           |
 | Storage             | ⚠️ Note: Some NVMe drives may have problems. |
@@ -45,7 +45,7 @@ _______________________________________________
 | Power Management    | ✔️ CPU PM with SSDT-PLUG & SMCBatteryManager |
 | Sleep / Wake        | ✔️ Partial (improving)                       |
 | Battery Readout     | ✔️ Working                                   |
-| HDMI Output         | ✔️ Working (limited)                         |
+| HDMI Output         | ❗️ Limited Note: No graphics acceleration    |
 
 ________________________________________________
 📝 To activate the graphics drivers, modifications are required using [RU.efi](https://ruexe.blogspot.com/), specifically CFG Lock, and DVMT Pre-allocated. More information can be found here: 
@@ -55,9 +55,10 @@ ________________________________________________
 ❌ Known Issues / Not Working
 🔸 Intel UHD G4 / Iris Xe — GPU Acceleration
 
-Currently QE/CI hardware acceleration is unavailable because Apple never released Kexts for Gen12 Xe architecture.
+Currently QE/CI hardware acceleration is unavailable because Apple never released Kexts for Gen12 Xe architecture. Only useful for programming tasks; for that purpose, it will have acceptable performance (I3 users).
 
 Consequences:
+- The keyboard does not have brightness control.
 - Laggy animations
 - Poor performance in Mission Control
 - No HEVC/H.264 hardware encoding
