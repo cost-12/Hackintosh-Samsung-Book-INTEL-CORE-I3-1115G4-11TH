@@ -228,6 +228,46 @@
 				<key>Path</key>
 				<string>SSDT-USBW.aml</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-BAT.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-BAT.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-FPDT.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-FPDT.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-LPIT.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-LPIT.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-VOLKEYSS.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-VOLKEYSS.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-SMSG.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-SMSG.aml</string>
+			</dict>
 		</array>
 		<key>Delete</key>
 		<array>
@@ -390,7 +430,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1E2NA==</data>
 				<key>Limit</key>
@@ -420,7 +460,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1E2Mw==</data>
 				<key>Limit</key>
@@ -750,7 +790,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1EwNg==</data>
 				<key>Limit</key>
@@ -780,7 +820,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X1EwNw==</data>
 				<key>Limit</key>
@@ -1080,7 +1120,7 @@
 			<key>AllowRelocationBlock</key>
 			<false/>
 			<key>AvoidRuntimeDefrag</key>
-			<true/>
+			<false/>
 			<key>ClearTaskSwitchBit</key>
 			<false/>
 			<key>DevirtualiseMmio</key>
@@ -1094,7 +1134,7 @@
 			<key>EnableSafeModeSlide</key>
 			<true/>
 			<key>EnableWriteUnprotector</key>
-			<true/>
+			<false/>
 			<key>FixupAppleEfiImages</key>
 			<true/>
 			<key>ForceBooterSignature</key>
@@ -1112,7 +1152,7 @@
 			<key>ProvideMaxSlide</key>
 			<integer>0</integer>
 			<key>RebuildAppleMemoryMap</key>
-			<false/>
+			<true/>
 			<key>ResizeAppleGpuBars</key>
 			<integer>-1</integer>
 			<key>SetupVirtualMap</key>
@@ -1120,7 +1160,7 @@
 			<key>SignalAppleOS</key>
 			<false/>
 			<key>SyncRuntimePermissions</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>DeviceProperties</key>
@@ -1170,24 +1210,6 @@
 				<key>model</key>
 				<string>Tiger Lake-LP Serial IO I2C Controller #0</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x15,0x1)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,21,1</string>
-				<key>device_type</key>
-				<string>Serial bus controller</string>
-				<key>model</key>
-				<string>Tiger Lake-LP Serial IO I2C Controller #1</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x15,0x3)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,21,3</string>
-				<key>device_type</key>
-				<string>Serial bus controller</string>
-				<key>model</key>
-				<string>Tiger Lake-LP Serial IO I2C Controller #3</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -1226,6 +1248,15 @@
 				<key>model</key>
 				<string>RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x1D,0x1)</key>
+			<dict>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,29,1</string>
+				<key>device_type</key>
+				<string>PCI bridge</string>
+				<key>model</key>
+				<string>Tiger Lake-LP PCI Express Root Port #10</string>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1D,0x1)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -1233,8 +1264,10 @@
 				<key>device_type</key>
 				<string>SD Host controller</string>
 				<key>model</key>
-				<string>SD/MMC Card Reader Controller</string>
+				<string>OZ711 SD/MMC Card Reader Controller</string>
 			</dict>
+			<key>PciRoot(0x0)/Pci(0x14,0x0)/Pci(0x0,0x0)</key>
+			<dict/>
 			<key>#PciRoot(0x0)/Pci(0x1D,0x4)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -1259,6 +1292,8 @@
 				<string>Internal@0,31,3</string>
 				<key>device_type</key>
 				<string>Multimedia audio controller</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
 				<key>layout-id</key>
 				<integer>11</integer>
 				<key>model</key>
@@ -1284,6 +1319,8 @@
 			</dict>
 			<key>##PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
+				<key>###IGPU-CONFIG-POST-INSTALL###</key>
+				<string></string>
 				<key>rebuild-device-tree</key>
 				<data>AQAAAA==</data>
 				<key>rps-control</key>
@@ -1363,13 +1400,13 @@
 				<key>AAPL,GfxYTile</key>
 				<data>AQAAAA==</data>
 				<key>AAPL,ig-platform-id</key>
-				<data>AABRig==</data>
+				<data>AABSig==</data>
 				<key>#disable-external-gpu</key>
 				<data>AQAAAA==</data>
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
 				<key>device-id</key>
-				<data>UYoAAA==</data>
+				<data>UooAAA==</data>
 				<key>AAPL00,override-no-connect</key>
 				<data>AP///////wAJ5RIIAAAAAB8cAQSlIhN4AwmAlVxakSkhUFQAAAABAQEBAQEBAQEBAQEBAQEBAzqANnE4HkAwIDYAWMIQAAAaAAAAAAAAAAAAAAAAAAAAAAAAAAAA/gBCT0UgQ1EKICAgICAgAAAA/gBOVDE1NkZITS1ONjEKAO0=</data>
 				<key>##AAPL00,override-no-connect</key>
@@ -1432,8 +1469,10 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
+				<key>###IGPU-CONFIG-INSTALL-VESA###</key>
+				<string></string>
 				<key>AAPL,ig-platform-id</key>
-				<data>AABRig==</data>
+				<data>AABcig==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
 				<key>AAPL00,override-no-connect</key>
@@ -1441,7 +1480,7 @@
 				<key>complete-modeset</key>
 				<data>AQAAAA==</data>
 				<key>device-id</key>
-				<data>UYoAAA==</data>
+				<data>XIoAAA==</data>
 				<key>#device_type</key>
 				<string>VGA compatible controller</string>
 				<key>enable-backlight-registers-fix</key>
@@ -2029,42 +2068,6 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Mouse.kext</string>
-				<key>Comment</key>
-				<string>VoodooPS2Mouse.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VoodooPS2Mouse</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Trackpad.kext</string>
-				<key>Comment</key>
-				<string>VoodooPS2Trackpad.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VoodooPS2Trackpad</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
 				<string>VoodooI2C.kext/Contents/PlugIns/VoodooGPIO.kext</string>
 				<key>Comment</key>
 				<string>VoodooGPIO.kext</string>
@@ -2198,24 +2201,6 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>CtlnaSDXC.kext</string>
-				<key>Comment</key>
-				<string>CtlnaSDXC.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/CtlnaSDXC</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -2371,24 +2356,6 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>VoodooSDHC.kext</string>
-				<key>Comment</key>
-				<string>VoodooSDHC.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VoodooSDHC</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
 				<string>VoodooTSCSync.kext</string>
 				<key>Comment</key>
 				<string>VoodooTSCSync.kext</string>
@@ -2486,6 +2453,24 @@
 				<true/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/USBWakeFixup</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Mouse.kext</string>
+				<key>Comment</key>
+				<string>VoodooPS2Mouse.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/VoodooPS2Mouse</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -3099,10 +3084,10 @@
 			<string></string>
 			<key>MaxBIOSVersion</key>
 			<false/>
-			<key>ROM</key>
-			<data></data>
 			<key>ProcessorType</key>
 			<integer>1537</integer>
+			<key>ROM</key>
+			<data></data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemMemoryStatus</key>
