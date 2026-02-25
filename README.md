@@ -1,7 +1,9 @@
 # Hackintosh-Samsung-Book-INTEL-CORE-I3-1115G4-11TH
 BASE EFI GABRIEL LUCHINA
-Opencore version: 1.0.6
-Release date: 20/11/2025
+- Opencore version: 1.0.6
+    Release date Opencore: 03/11/2025
+- EFI version: 0.0.5
+    Release date EFI: 25/02/2026
 
 ![Captura de Tela 2024-05-03 às 22 27 36](https://github.com/cost-12/Hackintosh-Samsung-Book-INTEL-CORE-I3-1115G4-11TH/assets/124941175/a9a25b24-b0f2-4273-ac02-963d56e7c684)
 _________________________________________________
@@ -40,7 +42,7 @@ _______________________________________________
 | Keyboard / Trackpad | ✔️ Fn keys and I2C trackpad are working      |
 | Audio (ALC897)      | ✔️ Functional                                |
 | USB                 | ✔️ Mapped / Stable                           |
-| Storage             | ⚠️ Note: Some NVMe drives may have problems. |
+| Storage             | ⚠️ Note: Some NVMe drives may have problems  |
 | Wi-Fi / Bluetooth   | ✔️ Via AirportItlwm / IntelBluetoothFirmware |
 | Power Management    | ✔️ CPU PM with SSDT-PLUG & SMCBatteryManager |
 | Sleep / Wake        | ✔️ Partial (improving)                       |
