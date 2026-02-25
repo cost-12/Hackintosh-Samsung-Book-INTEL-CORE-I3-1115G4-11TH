@@ -1,9 +1,9 @@
 # Hackintosh-Samsung-Book-INTEL-CORE-I3-1115G4-11TH
 BASE EFI GABRIEL LUCHINA
 - Opencore version: 1.0.6
-    Release date Opencore: 03/11/2025
+    - Release date Opencore: 03/11/2025
 - EFI version: 0.0.5
-    Release date EFI: 25/02/2026
+    - Release date EFI: 25/02/2026
 _________________________________________________
 
 ![Captura de Tela 2024-05-03 às 22 27 36](https://github.com/cost-12/Hackintosh-Samsung-Book-INTEL-CORE-I3-1115G4-11TH/assets/124941175/a9a25b24-b0f2-4273-ac02-963d56e7c684)
