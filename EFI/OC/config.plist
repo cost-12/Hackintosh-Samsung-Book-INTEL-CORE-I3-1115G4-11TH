@@ -268,6 +268,166 @@
 				<key>Path</key>
 				<string>SSDT-SMSG.aml</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtDPTF2.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtDPTF2.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtTCSS.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtTCSS.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtSEC.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtSEC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtTypeC.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtTypeC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtCPU012.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtCPU012.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtCPU013.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtCPU013.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtCPU014.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtCPU014.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtCPU015.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtCPU015.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>facp.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>facp.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtCPU1.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtCPU1.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtsleep3.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtsleep3.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtIgfx4.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtIgfx4.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtADEB.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtADEB.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtTGLU6.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtTGLU6.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtRHUB10.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtRHUB10.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtTHER7.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtTHER7.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtPM_REF16.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtPM_REF16.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtPM_REF17.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtPM_REF17.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtPM_REF18.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtPM_REF18.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>ssdtPM_REF19.aml</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>ssdtPM_REF19.aml</string>
+			</dict>
 		</array>
 		<key>Delete</key>
 		<array>
@@ -2797,7 +2957,7 @@
 			<key>HibernateSkipsPicker</key>
 			<false/>
 			<key>HideAuxiliary</key>
-			<false/>
+			<true/>
 			<key>InstanceIdentifier</key>
 			<string></string>
 			<key>LauncherOption</key>
@@ -3504,6 +3664,30 @@
 				<false/>
 				<key>Path</key>
 				<string>OpenUsbKbDxe.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string>Ext4Dxe.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>LoadEarly</key>
+				<false/>
+				<key>Path</key>
+				<string>Ext4Dxe.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string>OpenLinuxBoot.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>LoadEarly</key>
+				<false/>
+				<key>Path</key>
+				<string>OpenLinuxBoot.efi</string>
 			</dict>
 		</array>
 		<key>Input</key>
