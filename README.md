@@ -15,10 +15,6 @@ This project is aimed at beginners and intermediate Hackintosh users who want a 
 
 ⚠️ Important:
 This EFI is a work in progress. Certain components—especially the Intel UHD G4 iGPU—are not fully functional on macOS due to lack of official drivers. Expect limitations.
-
-- For support, questions or contributions:
-_________________________________________________ 
-[![Gmail](https://img.shields.io/badge/Gmail-hackinthc@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hackinthc@gmail.com)
 _________________________________________________
 ## System Specifications
 
@@ -122,10 +118,6 @@ Feel free to:
 - Share DSDTs, patches or new findings
 - Any help is appreciated!
 
-# ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
-
-https://discord.universohackintosh.com.br/
-
-# ![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)
-
-https://www.youtube.com/@UniversoHackintosh
+# [![Discord](https://img.shields.io/badge/Discord--%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](mailto:https://discord.universohackintosh.com.br/)
+# [![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](mailto:https://www.youtube.com/@UniversoHackintosh)
+# [![Gmail](https://img.shields.io/badge/Gmail-hackinthc@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:hackinthc@gmail.com)
