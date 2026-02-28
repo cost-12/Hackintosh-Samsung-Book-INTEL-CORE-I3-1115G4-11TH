@@ -122,10 +122,10 @@ Feel free to:
 - Share DSDTs, patches or new findings
 - Any help is appreciated!
 
-# Discord
+# ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
 
 https://discord.universohackintosh.com.br/
 
-# Recommended YouTube Channel
+# ![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)
 
 https://www.youtube.com/@UniversoHackintosh
