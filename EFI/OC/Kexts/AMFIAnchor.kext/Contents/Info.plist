@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleExecutable</key>
+	<string>AMFIAnchor</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.b00t0x.AMFIAnchor</string>
+	<key>CFBundleName</key>
+	<string>AMFIAnchor</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1.2</string>
+	<key>CFBundleVersion</key>
+	<string>0.1.2</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>AMFIAnchor</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.b00t0x.AMFIAnchor</string>
+			<key>IOClass</key>
+			<string>AMFIAnchor</string>
+			<key>IOMatchCategory</key>
+			<string>AMFIAnchor</string>
+			<key>IOProviderClass</key>
+			<string>IOResources</string>
+			<key>IOResourceMatch</key>
+			<string>IOKit</string>
+		</dict>
+	</dict>
+	<key>OSBundleCompatibleVersion</key>
+	<string>0.1.0</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>as.vit9696.Lilu</key>
+		<string>1.7.2</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>12.0.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>12.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>12.0.0</string>
+		<key>com.apple.kpi.mach</key>
+		<string>12.0.0</string>
+		<key>com.apple.kpi.private</key>
+		<string>12.0.0</string>
+		<key>com.apple.kpi.unsupported</key>
+		<string>12.0.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>

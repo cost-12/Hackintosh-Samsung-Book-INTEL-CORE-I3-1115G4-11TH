@@ -1,7 +1,7 @@
 # Status da EFI & Compatibilidade de Hardware
 
 **Samsung Book NP550XDA (`LH43STAR` / `SECCSD`)**  
-*macOS Monterey 12.7.6+ (compatível com Big Sur até Tahoe) • OpenCore 1.0.8 • WhateverXe 0.8.2 + WhateverXe-Graphics 0.4.4*
+*macOS Monterey 12.7.6+ (compatível com Big Sur até Tahoe) • OpenCore 1.0.8 • WhateverXe 0.8.3 + AMFIAnchor 0.1.2 + WhateverXe-Graphics 0.4.4*
 
 ---
 
@@ -28,7 +28,7 @@ A tabela a seguir reflete o estado validado após as intervenções, atualizaç�
 | Funcionalidade | Status | Driver / Mecanismo Responsável | Observações Técnicas |
 | :--- | :---: | :--- | :--- |
 | **Boot & Interface UEFI** | ✅ **100% Funcional** | OpenCore `1.0.8` + `UsbMouseDxe.efi` | `config.plist` validado pelo `ocvalidate 1.0.8` com esquema atualizado (`HideVerbose`). |
-| **Aceleração Gráfica Metal/OpenGL** | ✅ **100% Funcional** | `WhateverXe.kext` (`v0.8.2`) + `WhateverXe-Graphics` (`v0.4.4`) | Renderização nativa com aceleração 3D, Metal, OpenGL e `AppleIntelTGLCompat` (`v0.8.1`). |
+| **Aceleração Gráfica Metal/OpenGL** | ✅ **100% Funcional** | `WhateverXe.kext` (`v0.8.3`) + `AMFIAnchor` (`v0.1.2`) + `WhateverXe-Graphics` (`v0.4.4`) | Renderização nativa com aceleração 3D, Metal, OpenGL e `AppleIntelTGLCompat` (`v0.8.1`). |
 | **Decodificação de Vídeo (VDA)** | ✅ **100% Funcional** | `AppleIntelTGLGraphicsVADriver` | Aceleração em hardware para HEVC e H.264 (Safari, QuickTime, YouTube). |
 | **Controle de Brilho Nativo** | ✅ **100% Funcional** | `SSDT-PNLF.aml` (`_UID = 19`, IDs Tiger Lake) | Slider deslizante fluido na Central de Controle e Preferências do Sistema. |
 | **Teclas de Brilho (FN + F2 / F3)** | ✅ **100% Funcional** | `SSDT-SMSG.aml` (`_Q63`/`_Q64`) + `BrightnessKeys.kext` | Interceptação dos métodos `_Q63`/`_Q64` (`-> _X63`/`_X64`) na `DSDT` notificando `GFX0.DD1F`. |
@@ -41,37 +41,41 @@ A tabela a seguir reflete o estado validado após as intervenções, atualizaç�
 | **Rede Cabeada Gigabit** | ✅ **100% Funcional** | `RealtekRTL8111.kext` (`v3.0.0`) | Conexão Ethernet estável em 1000BASE-T. |
 | **Leitura de Bateria** | ✅ **100% Funcional** | `SMCBatteryManager.kext` (`v1.3.8`) + `ECEnabler.kext` (`v1.0.6`) | Percentual em tempo real, carregamento e tempo estimado via DSDT nativa (sem `SSDT-BAT.aml`). |
 | **Proteção de Carga Baixa** | ℹ️ **Opcional no macOS** | `lowbattery-guard` *(daemon externo à pasta EFI)* | Script/LaunchDaemon recomendado no sistema para desligamento limpo a 3%–4% antes do corte do BMS. |
-| **Display Sleep (Apagar Tela)** | ✅ **100% Funcional** | `WhateverXe` (`v0.8.2`) | Desliga a tela por inatividade e reacende sem tela preta (correções de wake da `v0.8.1+`). |
+| **Display Sleep (Apagar Tela)** | ✅ **100% Funcional** | `WhateverXe` (`v0.8.3`) | Desliga a tela por inatividade e reacende sem tela preta (correções de wake da `v0.8.1+`). |
 | **Ação ao Fechar a Tampa** | ✅ **Protegido** | `pmset -a disablesleep 1 sleep 0 lidwake 1` | Desliga o display e o backlight de imediato; não trava e não superaquece. |
 | **System Sleep / S3 (RAM Sleep)** | ❌ **Não Suportado** | Limitação de Arquitetura Tiger Lake | Sem suporte confiável de retorno S3 sem reinicialização completa do Display 12 via UEFI GOP neste hardware. |
-| **Saída Externa HDMI** | ⚠️ **Sob Acompanhamento** | `WhateverXe` Pipeline de Vídeo | Releases `0.7.x–0.8.2` avançaram em USB-C DP Alt Mode e power-wells; HDMI direto no `NP550XDA` segue em validação. |
+| **Saída Externa HDMI** | ⚠️ **Sob Acompanhamento** | `WhateverXe` Pipeline de Vídeo | Releases `0.7.x–0.8.3` avançaram em USB-C DP Alt Mode e power-wells; HDMI direto no `NP550XDA` segue em validação. |
 
 ---
 
 ## 3. Detalhamento das Correções e Atualizações na EFI
 
-### 3.1. Gráficos, Aceleração de Vídeo e Atualizações do `WhateverXe` (`0.6.1` -> `0.8.2`)
+### 3.1. Gráficos, Aceleração de Vídeo e Atualizações do `WhateverXe` (`0.6.1` -> `0.8.3`) & `AMFIAnchor` (`0.1.2`)
 
-A solução gráfica utilizada nesta EFI é composta por dois repositórios oficiais mantidos por **b00t0x**:
+A solução gráfica utilizada nesta EFI é composta por três projetos oficiais mantidos por **b00t0x**:
 
-* **[`b00t0x/WhateverXe`](https://github.com/b00t0x/WhateverXe)**: Plugin Lilu carregado pelo OpenCore (`EFI/OC/Kexts/WhateverXe.kext`, atualmente na versão **`0.8.2`**).
+* **[`b00t0x/WhateverXe`](https://github.com/b00t0x/WhateverXe)**: Plugin Lilu carregado pelo OpenCore (`EFI/OC/Kexts/WhateverXe.kext`, atualmente na versão **`0.8.3`**).
+* **[`b00t0x/AMFIAnchor`](https://github.com/b00t0x/AMFIAnchor)**: Engine de âncoras de confiança no CoreTrust (`AMFIAnchor.kext` **`0.1.2`**) acompanhada do provedor codeless (`AMFIAnchorInjector.kext` **`1.0.0`**), carregados imediatamente após o `Lilu.kext` (`MinKernel = 20.0.0`, `MaxKernel = 25.99.99`) para validar certificados assinados mantendo o AMFI ativo.
 * **[`b00t0x/WhateverXe-Graphics`](https://github.com/b00t0x/WhateverXe-Graphics)**: Instalador `.pkg` executado dentro do macOS (validado com **`v0.4.4`**), responsável por instalar `AppleIntelTGLCompat.kext` (`v0.8.1`) e os bundles/drivers doadores (`16.0.32`) em `/Library/Extensions` e `/Library/GPUBundles`, reconstruindo o *Auxiliary Kernel Collection* (AuxKC) sem quebrar o snapshot selado do sistema (SSV).
 
 > [!IMPORTANT]
 >
-> * **Mantenha ambos em versões compatíveis:** o projeto upstream exige que `WhateverXe.kext` e o pacote `WhateverXe-Graphics` sejam atualizados em conjunto a partir dos releases oficiais no GitHub.
+> * **Mantenha os componentes em versões compatíveis:** o projeto upstream exige que `WhateverXe.kext` e o pacote `WhateverXe-Graphics` sejam atualizados em conjunto a partir dos releases oficiais no GitHub.
 > * **Nunca ative `WhateverGreen.kext` junto:** `WhateverGreen.kext`, `NootedBlue.kext` e `DisplayMergeNub.kext` foram desativados no `config.plist`.
-> * **Requisitos obrigatórios no `config.plist`:** `AMFIPass.kext` (`1.4.1` Mod, com `MinKernel = 20.0.0`), `csr-active-config = 03080000` (`0x803`) e `SecureBootModel = Disabled` (dispensa flags amplas como `amfi=0x80`).
+> * **Ordem obrigatória e migração do `AMFIPass`:** `AMFIAnchor.kext` (`MinKernel = 20.0.0`, `MaxKernel = 25.99.99`) e `AMFIAnchorInjector.kext` (`ExecutablePath = ""`, `MinKernel = 20.0.0`, `MaxKernel = 25.99.99`) devem carregar imediatamente após `Lilu.kext` (`v1.7.2+`) com `csr-active-config = 03080000` (`0x803`) e `SecureBootModel = Disabled` (sem `amfi=0x80` ou `ipc_control_port_options=0`). Conforme o WhateverXe `0.8.3`, a entrada do `AMFIPass.kext` (`1.4.1` Mod) foi removida do `config.plist`; em validação no macOS Sonoma `14.8.9` (`23J631`), os frameworks de Wi-Fi do `OCLP Mod` compartilham a mesma raiz `OCLP Hackintosh Mod Root CA` registrada por `AMFIAnchorInjector.kext` (`b00t0x`), e `AMFIAnchor` reportou `InstallStatus = 1` / `AnchorReady = 1`. O arquivo stock `Utils/Kexts/AMFIPass-v1.4.1-RELEASE.zip` fica reservado apenas para quem aplicar root patches do OCLP oficial da Dortania (carregando-o após o `AMFIAnchorInjector.kext`).
 
-#### Principais novidades das atualizações do `WhateverXe` (`0.6.1` -> `0.8.2`)
+#### Principais novidades das atualizações do `WhateverXe` (`0.6.1` -> `0.8.3`)
 
 * **`v0.6.x` -> `v0.7.0`**: Ampliação de compatibilidade eDP para Tiger Lake / Alder Lake / Raptor Lake, expansão de suporte a USB-C DisplayPort Alt Mode, suporte experimental a painéis MIPI DSI, ajustes para macOS Sequoia e Tahoe e introdução do `AutoPkg-Assets.pkg` para aceleração gráfica já no instalador / OOBE.
 * **`v0.8.0`**: Melhorias de estabilidade na inicialização em configurações single-channel, ampliação de correspondência de Device IDs e correção de travamentos ao desligar monitores USB-C.
 * **`v0.8.1`**: Correção de notificações de sleep/wake ausentes ou duplicadas no display, correção de mapeamento de memória gráfica nas fronteiras de buffer, preservação da saída de vídeo do firmware quando apenas um dos componentes gráficos está instalado e suporte experimental a framebuffer 10-bit para painéis MIPI DSI compatíveis.
 * **`v0.8.2`**: Correção crítica de regressão introduzida na `v0.8.1` que podia deixar a tela totalmente preta logo após a inicialização do macOS.
+* **`v0.8.3`**: Substituição do `AMFIPass 1.4.1 Mod` pelo par **`AMFIAnchor` + `AMFIAnchorInjector.kext`** (mantendo AMFI habilitado), correção em falha de recuperação da GPU que podia travar reinicializações normais após um travamento gráfico, melhorias na inicialização/sleep de painéis eDP em Alder Lake / Raptor Lake e adição de controle experimental de brilho via VESA AUX nessas plataformas.
 
-#### Ajustes aplicados na EFI para o `WhateverXe 0.8.2`
+#### Ajustes aplicados na EFI para o `WhateverXe 0.8.3` & `AMFIAnchor 0.1.2`
 
+* **Ordem de carregamento CoreTrust em `Kernel -> Add`**:
+  * `[00]` `Lilu.kext` (`1.7.2`) -> `[01]` `AMFIAnchor.kext` (`0.1.2`, `MinKernel = 20.0.0`, `MaxKernel = 25.99.99`) -> `[02]` `AMFIAnchorInjector.kext` (`1.0.0`, codeless, `MinKernel = 20.0.0`, `MaxKernel = 25.99.99`) -> `[09]` `WhateverXe.kext` (`0.8.3`), com remoção da entrada legada de `AMFIPass.kext` (`1.4.1` Mod).
 * **Higienização do `DeviceProperties` (`PciRoot(0x0)/Pci(0x2,0x0)`)**:
   * Removidas todas as injeções legadas de `device-id` (spoofs de Ice Lake), `AAPL,ig-platform-id`, `framebuffer-*`, `AAPL00,override-no-connect` e `igfxfw`, mantendo apenas identificação limpa (`AAPL,slot-name`, `device_type`, `hda-gfx: onboard-1`, `model: Intel UHD Graphics`).
 * **Argumentos de Inicialização (`boot-args`)**:
@@ -89,11 +93,12 @@ A solução gráfica utilizada nesta EFI é composta por dois repositórios ofic
 
 * **OpenCore `1.0.8`**: Atualização de `BOOTx64.efi`, `OpenCore.efi`, drivers UEFI, tools (`CleanNvram.efi`, `ResetSystem.efi`), `ocvalidate`, `macrecovery` (com `macrecovery.bat`) e adição da chave `HideVerbose = false` em `UEFI -> Drivers` mais o driver `UsbMouseDxe.efi`.
 * **Atualização de Kexts**:
+  * `WhateverXe.kext`: atualizado para `0.8.3` (Release oficial).
+  * `AMFIAnchor.kext` (`0.1.2` Release) e `AMFIAnchorInjector.kext` (`1.0.0`): adicionados logo após `Lilu.kext` (`MinKernel = 20.0.0`, `MaxKernel = 25.99.99`), substituindo o `AMFIPass.kext` (`1.4.1` Mod).
   * `AppleALC.kext`: `1.9.7` -> `1.9.8` (`layout-id = 11` em `PciRoot(0x0)/Pci(0x1F,0x3)`).
   * `VirtualSMC.kext` (`1.3.7` -> `1.3.8`), `SMCProcessor.kext` (`1.3.2` -> `1.3.8`), `SMCBatteryManager.kext` (`1.3.7` -> `1.3.8`).
   * `AirportBrcmFixup.kext` (`2.2.0` -> `2.2.1`).
   * `IntelBluetoothFirmware.kext` (`2.5.0` -> `2.5.2`), `IntelBTPatcher.kext` (`2.5.0` -> `2.5.2`), `IntelBluetoothInjector.kext` (`2.4.0` -> `2.5.2`).
-  * `AMFIPass.kext` (`1.4.1` Mod atualizado, com `MinKernel` alterado de `23.0.0` para `20.0.0`).
 * **Correções em `DeviceProperties`**:
   * Adicionados metadados do controlador xHCI em `PciRoot(0x0)/Pci(0x14,0x0)` e removida entrada vazia `PciRoot(0x0)/Pci(0x14,0x0)/Pci(0x0,0x0)`.
   * Comentado `device-id` (`#device-id`) do MEI (`PciRoot(0x0)/Pci(0x16,0x0)`).
@@ -104,7 +109,7 @@ A solução gráfica utilizada nesta EFI é composta por dois repositórios ofic
 ### 3.3. Iluminação, Teclado, ACPI e Energia
 
 * **Higienização do Namespace ACPI (`config.plist`)**:
-  * Desabilitadas **29 tabelas redundantes ou dumps brutos** (`DSDT.aml`, `SSDT-BAT.aml`, `SSDT-TPD0.aml`, `ssdt_data.aml`, `SSDT-NVME_OFF.aml`, `SSDT-FPDT.aml`, `SSDT-LPIT.aml`, `facp.aml`, `mcfg.aml`, `nhlt.aml` e dumps `ssdt*.aml`), evitando conflitos `AE_ALREADY_EXISTS` no boot e mantendo ativas apenas as 24 tabelas essenciais.
+  * Desabilitadas **30 tabelas redundantes ou dumps brutos** (`DSDT.aml`, `SSDT-BAT.aml`, `SSDT-TPD0.aml`, `ssdt_data.aml`, `SSDT-NVME_OFF.aml`, `SSDT-FPDT.aml`, `SSDT-LPIT.aml`, `facp.aml`, `mcfg.aml`, `nhlt.aml` e dumps `ssdt*.aml`), evitando conflitos `AE_ALREADY_EXISTS` no boot e mantendo ativas apenas as 24 tabelas essenciais.
   * `ACPI -> Quirks`: `NormalizeHeaders` e `RebaseRegions` alterados para `false`, e patch `GPRW` -> `XPRW` refinado para `GPRW\x02` -> `XPRW\x02`.
 * **Tabela ACPI `SSDT-PNLF.aml`**:
   * Atualizada com os Device IDs Intel Tiger Lake Xe-LP (incluindo `0x9A78`) e `_UID = 19` para controle PWM nativo de brilho (`0xC8250` e `0xC8254`).

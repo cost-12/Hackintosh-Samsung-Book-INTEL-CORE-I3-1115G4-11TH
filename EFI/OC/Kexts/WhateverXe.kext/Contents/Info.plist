@@ -11,9 +11,9 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.8.2</string>
+	<string>0.8.3</string>
 	<key>CFBundleVersion</key>
-	<string>0.8.2</string>
+	<string>0.8.3</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>org.b00t0x.WhateverXe</key>
@@ -31,7 +31,7 @@
 		</dict>
 	</dict>
 	<key>OSBundleCompatibleVersion</key>
-	<string>0.8.2</string>
+	<string>0.8.3</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>as.vit9696.Lilu</key>
