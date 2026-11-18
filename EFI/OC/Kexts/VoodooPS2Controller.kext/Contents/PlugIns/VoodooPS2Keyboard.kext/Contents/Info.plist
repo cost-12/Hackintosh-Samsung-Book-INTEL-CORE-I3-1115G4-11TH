@@ -274,12 +274,18 @@
 					<key>Breakless PS2</key>
 					<array>
 						<string>;Items must be strings in the form of breaklessscan (in hex)</string>
+						<string>e008</string>
+						<string>e009</string>
+						<string>e020</string>
 						<string>e02e</string>
 						<string>e030</string>
 					</array>
 					<key>Custom ADB Map</key>
 					<array>
 						<string>;Items must be strings in the form of scanfrom=adbto (in hex)</string>
+						<string>e008=71</string>
+						<string>e009=6b</string>
+						<string>e020=4a</string>
 						<string>e02e=49</string>
 						<string>e030=48</string>
 					</array>
@@ -585,9 +591,28 @@
 					<dict>
 						<key>Breakless PS2</key>
 						<array>
+							<string>e002</string>
+							<string>e003</string>
+							<string>e004</string>
+							<string>e006</string>
+							<string>e008</string>
+							<string>e009</string>
 							<string>e020</string>
 							<string>e02e</string>
 							<string>e030</string>
+							<string>e033</string>
+							<string>e077</string>
+							<string>e079</string>
+						</array>
+						<key>Custom ADB Map</key>
+						<array>
+							<string>e002=70</string>
+							<string>e006=80</string>
+							<string>e008=71</string>
+							<string>e009=6b</string>
+							<string>e020=4a</string>
+							<string>e02e=49</string>
+							<string>e030=48</string>
 						</array>
 					</dict>
 				</dict>

@@ -88,7 +88,7 @@
 				<key>Comment</key>
 				<string>SSDT-NVME_OFF.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-NVME_OFF.aml</string>
 			</dict>
@@ -160,7 +160,7 @@
 				<key>Comment</key>
 				<string>SSDT-TPD0.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-TPD0.aml</string>
 			</dict>
@@ -184,7 +184,7 @@
 				<key>Comment</key>
 				<string>ssdt_data.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdt_data.aml</string>
 			</dict>
@@ -200,7 +200,7 @@
 				<key>Comment</key>
 				<string>DSDT.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>DSDT.aml</string>
 			</dict>
@@ -232,7 +232,7 @@
 				<key>Comment</key>
 				<string>SSDT-BAT.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-BAT.aml</string>
 			</dict>
@@ -240,7 +240,7 @@
 				<key>Comment</key>
 				<string>SSDT-FPDT.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-FPDT.aml</string>
 			</dict>
@@ -248,7 +248,7 @@
 				<key>Comment</key>
 				<string>SSDT-LPIT.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>SSDT-LPIT.aml</string>
 			</dict>
@@ -272,7 +272,7 @@
 				<key>Comment</key>
 				<string>ssdtDPTF2.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtDPTF2.aml</string>
 			</dict>
@@ -280,7 +280,7 @@
 				<key>Comment</key>
 				<string>ssdtCPU012.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtCPU012.aml</string>
 			</dict>
@@ -288,7 +288,7 @@
 				<key>Comment</key>
 				<string>ssdtCPU013.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtCPU013.aml</string>
 			</dict>
@@ -296,7 +296,7 @@
 				<key>Comment</key>
 				<string>ssdtCPU014.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtCPU014.aml</string>
 			</dict>
@@ -304,7 +304,7 @@
 				<key>Comment</key>
 				<string>ssdtCPU015.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtCPU015.aml</string>
 			</dict>
@@ -312,7 +312,7 @@
 				<key>Comment</key>
 				<string>facp.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>facp.aml</string>
 			</dict>
@@ -320,7 +320,7 @@
 				<key>Comment</key>
 				<string>ssdtCPU1.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtCPU1.aml</string>
 			</dict>
@@ -328,7 +328,7 @@
 				<key>Comment</key>
 				<string>ssdtsleep3.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtsleep3.aml</string>
 			</dict>
@@ -336,7 +336,7 @@
 				<key>Comment</key>
 				<string>ssdtIgfx4.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtIgfx4.aml</string>
 			</dict>
@@ -344,7 +344,7 @@
 				<key>Comment</key>
 				<string>ssdtTGLU6.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtTGLU6.aml</string>
 			</dict>
@@ -352,7 +352,7 @@
 				<key>Comment</key>
 				<string>ssdtRHUB10.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtRHUB10.aml</string>
 			</dict>
@@ -360,7 +360,7 @@
 				<key>Comment</key>
 				<string>ssdtTHER7.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtTHER7.aml</string>
 			</dict>
@@ -368,7 +368,7 @@
 				<key>Comment</key>
 				<string>ssdtPM_REF16.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtPM_REF16.aml</string>
 			</dict>
@@ -376,7 +376,7 @@
 				<key>Comment</key>
 				<string>ssdtPM_REF17.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtPM_REF17.aml</string>
 			</dict>
@@ -384,7 +384,7 @@
 				<key>Comment</key>
 				<string>ssdtPM_REF18.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtPM_REF18.aml</string>
 			</dict>
@@ -392,7 +392,7 @@
 				<key>Comment</key>
 				<string>ssdtPM_REF19.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtPM_REF19.aml</string>
 			</dict>
@@ -400,7 +400,7 @@
 				<key>Comment</key>
 				<string>ssdtADEB11.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtADEB11.aml</string>
 			</dict>
@@ -408,7 +408,7 @@
 				<key>Comment</key>
 				<string>ssdtSEC8.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtSEC8.aml</string>
 			</dict>
@@ -416,7 +416,7 @@
 				<key>Comment</key>
 				<string>ssdtTCSS5.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtTCSS5.aml</string>
 			</dict>
@@ -424,7 +424,7 @@
 				<key>Comment</key>
 				<string>ssdtTypeC9.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>ssdtTypeC9.aml</string>
 			</dict>
@@ -432,7 +432,7 @@
 				<key>Comment</key>
 				<string>nhlt.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>nhlt.aml</string>
 			</dict>
@@ -440,7 +440,7 @@
 				<key>Comment</key>
 				<string>mcfg.aml</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Path</key>
 				<string>mcfg.aml</string>
 			</dict>
@@ -516,7 +516,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>MDVQWFNYFEcFR01JTwpbgFBYQ1MAUEMyTWgKIFuBE1BYQ1MAAEAMUEJVUwhTQlVTCHBHUENCYHJgentpDAAAHwAAAQBgcmB5e2kKBwAKDABgcmB5U0JVUwoUAGCkYFuAUlBYWABHTUlPXl9BRFJfQURSCjBbgRNSUFhYAFZESUQgAEAUU1ZJRBBbgEZMRFIAckdNSU9eX0FEUl9BRFIKRAAKBluBEEZMRFIBRENBUCBEQ1RSEBRPGVdJU1QICF9UXzAAoE0YWxJWRElEAKJDGAFwmVZESUQAX1RfMKANk19UXzAMhoBaCaQBoUUWoA2TX1RfMAyGgFsJpAGhRBWgDZNfVF8wDIaAZTGkAaFDFKANk19UXzAMhoBmMaQBoUIToA2TX1RfMAyGgLEIpAGhQRKgDZNfVF8wDIaAsgikAaFAEaANk19UXzAMhoCzCKQBoU8PoA2TX1RfMAyGgLQIpAGhTg6gDZNfVF8wDIaA8ySkAaFNDaANk19UXzAMhoD0JKQBoUwMoA2TX1RfMAyGgPUkpAGhSwugDZNfVF8wDIaA9iSkAaFKCqANk19UXzAMhoD9JKQBoUkJoA2TX1RfMAyGgPskpAGhSAigDZNfVF8wDIaAJiWkAaFHB6ANk19UXzAMhoAbJ6QBoUYGoA2TX1RfMAyGgCMnpAGhRQWgDZNfVF8wDIaAJSekAaFEBKANk19UXzAMyxcBEaQBoTOgDZNfVF8wDIwWPgCkAaEjoA2TX1RfMAzsECLIpAGhE6ANk19UXzAM7BAhyKQBoQOkAKWhA6QAFE0FV1dTVAgIX1RfMACgSwRbElZESUQAokEEAXCZVkRJRABfVF8woA2TX1RfMAyGgGBzpAGhI6ANk19UXzAMhoBgdaQBoROgDZNfVF8wDMMUdU2kAaEDpACloQOkAKBA0FdJU1RbhEYEV1JTVAUAABQIX1NUQQ==</data>
 				<key>Limit</key>
@@ -606,7 +606,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>X1E2NA==</data>
 				<key>Limit</key>
@@ -624,7 +624,7 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data></data>
+				<data>RFNEVA==</data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -636,7 +636,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>X1E2Mw==</data>
 				<key>Limit</key>
@@ -654,7 +654,7 @@
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data></data>
+				<data>RFNEVA==</data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -876,7 +876,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>VVBSVwA=</data>
 				<key>Limit</key>
@@ -1056,7 +1056,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>X0RTTQ==</data>
 				<key>Limit</key>
@@ -1208,7 +1208,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>R1BSVw==</data>
+				<data>R1BSVwI=</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
@@ -1216,7 +1216,7 @@
 				<key>OemTableId</key>
 				<data></data>
 				<key>Replace</key>
-				<data>WFBSVw==</data>
+				<data>WFBSVwI=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -1232,9 +1232,9 @@
 			<key>FadtEnableReset</key>
 			<false/>
 			<key>NormalizeHeaders</key>
-			<true/>
+			<false/>
 			<key>RebaseRegions</key>
-			<true/>
+			<false/>
 			<key>ResetHwSig</key>
 			<false/>
 			<key>ResetLogoStatus</key>
@@ -1356,6 +1356,12 @@
 			<dict>
 				<key>acpi-wake-type</key>
 				<data>AQ==</data>
+				<key>AAPL,slot-name</key>
+				<string>Internal@0,20,0</string>
+				<key>device_type</key>
+				<string>USB controller</string>
+				<key>model</key>
+				<string>Intel Tiger Lake-LP USB 3.2 Gen 2x1 xHCI Host Controller</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x14,0x2)</key>
 			<dict>
@@ -1394,7 +1400,7 @@
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,22,0</string>
-				<key>device-id</key>
+				<key>#device-id</key>
 				<data>4DQAAA==</data>
 				<key>device_type</key>
 				<string>Communication controller</string>
@@ -1424,7 +1430,7 @@
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,29,0/0,0</string>
 				<key>device_type</key>
-				<string>Non-Volatile memory controller</string>
+				<string>Ethernet controller</string>
 				<key>model</key>
 				<string>RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller</string>
 			</dict>
@@ -1446,8 +1452,6 @@
 				<key>model</key>
 				<string>OZ711 SD/MMC Card Reader Controller</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x0)/Pci(0x0,0x0)</key>
-			<dict/>
 			<key>#PciRoot(0x0)/Pci(0x1D,0x4)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -1497,129 +1501,6 @@
 				<key>model</key>
 				<string>Tiger Lake-LP SPI Controller</string>
 			</dict>
-			<key>##PciRoot(0x0)/Pci(0x2,0x0)</key>
-			<dict>
-				<key>###IGPU-CONFIG-POST-INSTALL###</key>
-				<string></string>
-				<key>rebuild-device-tree</key>
-				<data>AQAAAA==</data>
-				<key>rps-control</key>
-				<data>AQAAAA==</data>
-				<key>igfxpavp</key>
-				<data>AQAAAA==</data>
-				<key>igfxfw</key>
-				<data>AQAAAA==</data>
-				<key>complete-modeset</key>
-				<data>AQAAAA==</data>
-				<key>#disable-telemetry-load</key>
-				<data>AQAAAA==</data>
-				<key>#disable-hdmi-patches</key>
-				<data>AQAAAA==</data>
-				<key>#framebuffer-con2-enable</key>
-				<data>AQAAAA==</data>
-				<key>#framebuffer-con2-alldata</key>
-				<data>AwAAAAoAAAABAAAAAQAAAAAEAADBAgAA</data>
-				<key>#framebuffer-con1-enable</key>
-				<data>AQAAAA==</data>
-				<key>#framebuffer-con1-alldata</key>
-				<data>AgAAAAkAAAABAAAAAQAAAAAEAADBAgAA</data>
-				<key>#framebuffer-con0-enable</key>
-				<data>AQAAAA==</data>
-				<key>#framebuffer-con0-alldata</key>
-				<data>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAGAAAAA==</data>
-				<key>#framebuffer-con3-preferred-lspcon-mode</key>
-				<data>AQAAAA==</data>
-				<key>#framebuffer-con3-has-lspcon</key>
-				<data>AQAAAA==</data>
-				<key>#framebuffer-portcount</key>
-				<data>BAAAAA==</data>
-				<key>enable-max-pixel-clock-override</key>
-				<data>AQAAAA==</data>
-				<key>enable-hdmi20</key>
-				<data>AQAAAA==</data>
-				<key>disable-agdc</key>
-				<data>AQAAAA==</data>
-				<key>#backlight-smoother-threshold</key>
-				<data>LAEAAA==</data>
-				<key>#backlight-smoother-interval</key>
-				<data>BwAAAA==</data>
-				<key>#backlight-smoother-steps</key>
-				<data>IwAAAA==</data>
-				<key>enable-backlight-smoother</key>
-				<data>AQAAAA==</data>
-				<key>#enable-hdmi-dividers-fix</key>
-				<data>AQAAAA==</data>
-				<key>#framebuffer-unifiedmem</key>
-				<data>AAAAYA==</data>
-				<key>framebuffer-patch2-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-patch2-count</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-patch2-find</key>
-				<data>dChI/wWeZQsAviAgDABMie/oP+L//w0AEAAA</data>
-				<key>framebuffer-patch2-replace</key>
-				<data>kJBI/wWeZQsAviAgDABMie/oP+L//w0AEAAA</data>
-				<key>framebuffer-patch1-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-patch1-count</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-patch1-find</key>
-				<data>6E4NAACFwHVA</data>
-				<key>framebuffer-patch1-replace</key>
-				<data>6E4NAACFwOtA</data>
-				<key>framebuffer-patch0-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-patch0-count</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-patch0-find</key>
-				<data>6DHl//+EwHQ9</data>
-				<key>framebuffer-patch0-replace</key>
-				<data>6DHl//+EwOs9</data>
-				<key>AAPL,slot-name</key>
-				<string>Internal@0,2,0</string>
-				<key>AAPL,GfxYTile</key>
-				<data>AQAAAA==</data>
-				<key>AAPL,ig-platform-id</key>
-				<data>AABRig==</data>
-				<key>#disable-external-gpu</key>
-				<data>AQAAAA==</data>
-				<key>device_type</key>
-				<string>VGA compatible controller</string>
-				<key>device-id</key>
-				<data>UYoAAA==</data>
-				<key>AAPL00,override-no-connect</key>
-				<data>AP///////wAJ5RIIAAAAAB8cAQSlIhN4AwmAlVxakSkhUFQAAAABAQEBAQEBAQEBAQEBAQEBAzqANnE4HkAwIDYAWMIQAAAaAAAAAAAAAAAAAAAAAAAAAAAAAAAA/gBCT0UgQ1EKICAgICAgAAAA/gBOVDE1NkZITS1ONjEKAO0=</data>
-				<key>##AAPL00,override-no-connect</key>
-				<data>AP///////wAGEPKcAAAAABoVAQSVGg54Au8Fl1dUkiciUFQAAAABAQEBAQEBAQEBAQEBAQEBAzqANnE4HkAwIDYAWMIQAAAaAAAA/ABDb2xvciBMQ0QKICAgAAAA/QA4TB5TEQAKICAgICAgAAAA/gBOVDE1NkZITS1ONjEKAEY=</data>
-				<key>dpcd-max-link-rate</key>
-				<data>CgAAAA==</data>
-				<key>enable-backlight-registers-fix</key>
-				<data>AQAAAA==</data>
-				<key>enable-cdclk-frequency-fix</key>
-				<data>AQAAAA==</data>
-				<key>enable-dbuf-early-optimizer</key>
-				<data>AQAAAA==</data>
-				<key>enable-dpcd-max-link-rate-fix</key>
-				<data>AQAAAA==</data>
-				<key>enable-dvmt-calc-fix</key>
-				<data>AQAAAA==</data>
-				<key>enable-lspcon-support</key>
-				<data>AQAAAA==</data>
-				<key>#enable-metal</key>
-				<data>AQAAAA==</data>
-				<key>force-online</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
-				<key>#model</key>
-				<string>Intel UHD Graphics G4</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x4,0x0)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -1649,36 +1530,14 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
-				<key>###IGPU-CONFIG-INSTALL-VESA###</key>
-				<string></string>
-				<key>AAPL,ig-platform-id</key>
-				<data>AABcig==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
-				<key>AAPL00,override-no-connect</key>
-				<data>AP///////wAJ5RIIAAAAAB8cAQSlIhN4AwmAlVxakSkhUFQAAAABAQEBAQEBAQEBAQEBAQEBAzqANnE4HkAwIDYAWMIQAAAaAAAAAAAAAAAAAAAAAAAAAAAAAAAA/gBCT0UgQ1EKICAgICAgAAAA/gBOVDE1NkZITS1ONjEKAO0=</data>
-				<key>complete-modeset</key>
-				<data>AQAAAA==</data>
-				<key>device-id</key>
-				<data>XIoAAA==</data>
-				<key>#device_type</key>
+				<key>device_type</key>
 				<string>VGA compatible controller</string>
-				<key>enable-backlight-registers-fix</key>
-				<data>AQAAAA==</data>
-				<key>enable-cdclk-frequency-fix</key>
-				<data>AQAAAA==</data>
-				<key>enable-dbuf-early-optimizer</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-fbmem</key>
-				<data>AACQAA==</data>
-				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-stolenmem</key>
-				<data>AAAwAQ==</data>
-				<key>igfxfw</key>
-				<data>AgAAAA==</data>
-				<key>#model</key>
-				<string>Intel Iris Plus Graphics G4 (Ice Lake)</string>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+				<key>model</key>
+				<string>Intel UHD Graphics</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1804,9 +1663,27 @@
 				<key>Comment</key>
 				<string>WhateverGreen.kext</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/WhateverGreen</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>WhateverXe.kext</string>
+				<key>Comment</key>
+				<string>WhateverXe.kext</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/WhateverXe</string>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
@@ -1840,7 +1717,7 @@
 				<key>Comment</key>
 				<string>DisplayMergeNub.kext</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/DisplayMergeNub</string>
 				<key>MaxKernel</key>
@@ -2062,7 +1939,7 @@
 				<key>MaxKernel</key>
 				<string>25.99.99</string>
 				<key>MinKernel</key>
-				<string>23.0.0</string>
+				<string>20.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -3251,7 +3128,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>-igfxvesa npci=0x2000 keepsyms=1 nvme=-1 -noDC9 igfxcflbklt=0 -amfipassbeta</string>
+				<string>-allow3d -disablegfxfirmware npci=0x2000 keepsyms=1 nvme=-1</string>
 				<key>csr-active-config</key>
 				<data>AwgAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -3681,6 +3558,8 @@
 				<string>OpenRuntime.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>HideVerbose</key>
+				<false/>
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
@@ -3693,6 +3572,8 @@
 				<string>HfsPlus.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>HideVerbose</key>
+				<false/>
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
@@ -3705,6 +3586,8 @@
 				<string>OpenLinuxBoot.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>HideVerbose</key>
+				<false/>
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
@@ -3717,6 +3600,8 @@
 				<string>Ext4Dxe.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>HideVerbose</key>
+				<false/>
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
@@ -3729,6 +3614,8 @@
 				<string>AudioDxe.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>HideVerbose</key>
+				<false/>
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
@@ -3741,6 +3628,8 @@
 				<string>OpenCanopy.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>HideVerbose</key>
+				<false/>
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
@@ -3753,6 +3642,8 @@
 				<string>FirmwareSettingsEntry.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>HideVerbose</key>
+				<false/>
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
@@ -3765,6 +3656,8 @@
 				<string>ResetNvramEntry.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>HideVerbose</key>
+				<false/>
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
@@ -3777,6 +3670,8 @@
 				<string>OpenUsbKbDxe.efi</string>
 				<key>Enabled</key>
 				<false/>
+				<key>HideVerbose</key>
+				<false/>
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
@@ -3789,6 +3684,8 @@
 				<string>apfs_aligned.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>HideVerbose</key>
+				<false/>
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
@@ -3801,6 +3698,8 @@
 				<string>btrfs_x64.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>HideVerbose</key>
+				<false/>
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
@@ -3813,10 +3712,26 @@
 				<string>ExFatDxe.efi</string>
 				<key>Enabled</key>
 				<true/>
+				<key>HideVerbose</key>
+				<false/>
 				<key>LoadEarly</key>
 				<false/>
 				<key>Path</key>
 				<string>ExFatDxe.efi</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<string></string>
+				<key>Comment</key>
+				<string>UsbMouseDxe.efi</string>
+				<key>Enabled</key>
+				<true/>
+				<key>HideVerbose</key>
+				<false/>
+				<key>LoadEarly</key>
+				<false/>
+				<key>Path</key>
+				<string>UsbMouseDxe.efi</string>
 			</dict>
 		</array>
 		<key>Input</key>

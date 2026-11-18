@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleExecutable</key>
+	<string>WhateverXe</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.b00t0x.WhateverXe</string>
+	<key>CFBundleName</key>
+	<string>WhateverXe</string>
+	<key>CFBundlePackageType</key>
+	<string>KEXT</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.8.2</string>
+	<key>CFBundleVersion</key>
+	<string>0.8.2</string>
+	<key>IOKitPersonalities</key>
+	<dict>
+		<key>org.b00t0x.WhateverXe</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>org.b00t0x.WhateverXe</string>
+			<key>IOClass</key>
+			<string>WhateverXe</string>
+			<key>IOMatchCategory</key>
+			<string>WhateverXe</string>
+			<key>IOProviderClass</key>
+			<string>IOResources</string>
+			<key>IOResourceMatch</key>
+			<string>IOKit</string>
+		</dict>
+	</dict>
+	<key>OSBundleCompatibleVersion</key>
+	<string>0.8.2</string>
+	<key>OSBundleLibraries</key>
+	<dict>
+		<key>as.vit9696.Lilu</key>
+		<string>1.2.0</string>
+		<key>com.apple.iokit.IOPCIFamily</key>
+		<string>1.1</string>
+		<key>com.apple.kpi.bsd</key>
+		<string>10.0.0</string>
+		<key>com.apple.kpi.dsep</key>
+		<string>10.0.0</string>
+		<key>com.apple.kpi.iokit</key>
+		<string>10.0.0</string>
+		<key>com.apple.kpi.libkern</key>
+		<string>10.0.0</string>
+		<key>com.apple.kpi.mach</key>
+		<string>10.0.0</string>
+		<key>com.apple.kpi.unsupported</key>
+		<string>10.0.0</string>
+	</dict>
+	<key>OSBundleRequired</key>
+	<string>Root</string>
+</dict>
+</plist>
