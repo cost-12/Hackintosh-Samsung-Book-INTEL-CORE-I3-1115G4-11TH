@@ -6,10 +6,10 @@
 ---
 
 [![OpenCore](https://img.shields.io/badge/OpenCore-1.0.8-blue.svg?style=for-the-badge&logo=apple)](https://github.com/acidanthera/OpenCorePkg)
-[![EFI Version](https://img.shields.io/badge/EFI%20Version-v0.0.7-green.svg?style=for-the-badge)](https://github.com/)
+[![EFI Version](https://img.shields.io/badge/EFI%20Version-v0.0.8%20(Pre--release)-yellowgreen.svg?style=for-the-badge)](https://github.com/cost-12/Hackintosh-Samsung-Book-INTEL-CORE-I3-1115G4-11TH/releases)
 [![macOS Support](https://img.shields.io/badge/macOS-Big%20Sur%20--%20Tahoe-orange.svg?style=for-the-badge&logo=apple)](https://www.apple.com/macos/)
 [![Graphics](https://img.shields.io/badge/WhateverXe-v0.8.3%20(Metal%203)-purple.svg?style=for-the-badge&logo=intel)](https://github.com/b00t0x/WhateverXe)
-[![Status](https://img.shields.io/badge/Status-Daily%20Driver-brightgreen.svg?style=for-the-badge)](https://github.com/)
+[![Status](https://img.shields.io/badge/Status-Daily%20Driver-brightgreen.svg?style=for-the-badge)](./Utils/Docs/STATUS_EFI_SAMSUNG_NP550XDA.md)
 
 ---
 
@@ -168,8 +168,9 @@ Intel Xe-LP graphics acceleration relies on three companion open-source componen
 * **Power & Battery:** `ECEnabler.kext` (`v1.0.6`), `CPUFriend.kext` (`v1.3.0`) + `CPUFriendDataProvider.kext` (`v1.0.1`, tuned to `800 MHz` LFM and EPP `0x20`), `HWPEnabler.kext` (`v1.2`), `HibernationFixup.kext` (`v1.5.4`).
 * **AMFI / Root Anchor Support:** `AMFIAnchor.kext` (`v0.1.2`) + `AMFIAnchorInjector.kext` (`v1.0.0`, codeless), loaded immediately after `Lilu.kext` with `MinKernel = 20.0.0` and `MaxKernel = 25.99.99` *(replaces `AMFIPass.kext` `1.4.1` Mod; stock `AMFIPass-v1.4.1-RELEASE.zip` remains archived in `Utils/Kexts/`)*.
 * **Audio:** `AppleALC.kext` (`v1.9.8`, `layout-id = 11` injected via `DeviceProperties`).
-* **Input Devices:** `VoodooI2C.kext` (`v2.8`) + `VoodooI2CHID.kext` (`v1.0`) with `force-polling = 1` on `I2C0`, `VoodooPS2Controller.kext` (`v2.3.7` with extended Samsung `Breakless PS2` and `Custom ADB Map` entries), `BrightnessKeys.kext`.
-* **Connectivity:** `AirportItlwm` (`BigSur`, `Monterey`, `Ventura` — `Sonoma` disabled), `AirportBrcmFixup.kext` (`v2.2.1`) + `IOSkywalkFamily.kext` + `IO80211FamilyLegacy.kext` (`MinKernel = 23.0.0` for OCLP Sonoma+), `IntelBluetoothFirmware` / `IntelBTPatcher` / `IntelBluetoothInjector` (`v2.5.2`), `BlueToolFixup.kext` (`v2.7.2`), `RealtekRTL8111.kext` (`v3.0.0`).
+* **Input Devices:** `VoodooI2C.kext` (`v2.8`) + `VoodooI2CHID.kext` (`v1.0`) with `force-polling = 1` on `I2C0`, `VoodooPS2Controller.kext` (`v2.3.7` with extended Samsung `Breakless PS2` and `Custom ADB Map` entries), `BrightnessKeys.kext` (`v1.0.4`).
+* **Connectivity:** `AirportItlwm` (`BigSur`, `Monterey`, `Ventura` — `Sonoma` disabled), `AirportBrcmFixup.kext` (`v2.2.1`) + `IOSkywalkFamily.kext` + `IO80211FamilyLegacy.kext` (`MinKernel = 23.0.0` for OCLP Sonoma+), `IntelBluetoothFirmware` / `IntelBTPatcher` / `IntelBluetoothInjector` (`v2.5.2`), `BlueToolFixup.kext` / `BrcmFirmwareData.kext` / `BrcmPatchRAM3.kext` (`v2.7.2`), `RealtekRTL8111.kext` (`v3.0.0` / `3.0.4`).
+* **Platform & Storage:** `USBMap.kext` (`v1.1`), `NVMeFix.kext` (`v1.1.3`), `RestrictEvents.kext` (`v1.1.6`), `FeatureUnlock.kext` (`v1.1.8`), `NoTouchID.kext` (`v1.0.4`), `RTCMemoryFixup.kext` (`v1.0.8`), `EmeraldSDHC.kext` (`v0.1.2`).
 
 ---
 
@@ -191,7 +192,7 @@ Intel Xe-LP graphics acceleration relies on three companion open-source componen
 
 * **`csr-active-config`:** `03080000` (`0x803`) with `SecureBootModel = Disabled` (required for `WhateverXe-Graphics` AuxKC loading).
 * **`PciRoot(0x0)/Pci(0x2,0x0)`:** Sanitized to standard identification (`AAPL,slot-name`, `device_type`, `hda-gfx`, `model: Intel UHD Graphics`) without Ice Lake/Comet Lake `device-id` or framebuffer spoofs.
-* **UEFI Drivers:** OpenCore `1.0.8` drivers (`HideVerbose = false` schema) including `UsbMouseDxe.efi`, `OpenRuntime.efi`, `OpenCanopy.efi`, `OpenLinuxBoot.efi`, `Ext4Dxe.efi`, `btrfs_x64.efi`, `ExFatDxe.efi`, `apfs_aligned.efi`, and `HfsPlus.efi`.
+* **UEFI Drivers:** OpenCore `1.0.8` drivers (`HideVerbose = false` schema): `OpenRuntime.efi`, `HfsPlus.efi`, `OpenLinuxBoot.efi`, `Ext4Dxe.efi`, `AudioDxe.efi`, `OpenCanopy.efi`, `FirmwareSettingsEntry.efi`, `ResetNvramEntry.efi`, `apfs_aligned.efi`, `btrfs_x64.efi`, `ExFatDxe.efi`, and `UsbMouseDxe.efi` (`OpenUsbKbDxe.efi` disabled).
 
 ### SMBIOS Profile
 
@@ -212,6 +213,31 @@ Intel Xe-LP graphics acceleration relies on three companion open-source componen
 
 > [!TIP]
 > For a detailed Portuguese technical report of every fix and hardware status on this machine, check [`Utils/Docs/STATUS_EFI_SAMSUNG_NP550XDA.md`](./Utils/Docs/STATUS_EFI_SAMSUNG_NP550XDA.md).
+
+---
+
+## 🚀 Quick Setup & Release Utilities (`Pendrive.zip`)
+
+Each GitHub release bundles `Pendrive.zip` with two folders:
+
+* **`Pendrive/EFI`**: The validated OpenCore `1.0.8` EFI (with sanitized SMBIOS placeholders ready for `GenSMBIOS`).
+* **`Pendrive/Utilities`**: Essential tools for setup, graphics activation, and diagnostics — including `WhateverXe-Graphics-0.4.4.pkg`, `ProperTree`, `python-3.14.3-macos11.pkg`, `MountEFI`, `ocvalidate` (`1.0.8`), `macrecovery` (`1.0.8`), `Hackintool.zip`, `IORegistryExplorer.app`, `DarwinDumper.app`, `AppCleaner.app`, `Intel Power Gadget v3.7.0.dmg`, `Kexts/` (including stock `AMFIPass-v1.4.1-RELEASE.zip`, `IO80211FamilyLegacy-v1.0.0.zip`, and `IOSkywalkFamily-v1.2.0.zip`), `Docs/`, and lid-sleep helper scripts (`ajustar_sleep_tampa.sh` / `restaurar_sleep_padrao.sh`).
+
+### Setup & Post-Install Checklist
+
+1. **Generate SMBIOS:** Populate `PlatformInfo -> Generic` (`SystemSerialNumber`, `SystemUUID`, `MLB`, and `ROM`) for `MacBookAir9,1` in `EFI/OC/config.plist` using `ProperTree` + `GenSMBIOS`.
+2. **Validate config:** Run `./Utils/ocvalidate/ocvalidate EFI/OC/config.plist` after any manual edit (`0` issues expected).
+3. **Install Graphics Stack:** Boot macOS with this EFI, run `Utilities/WhateverXe-Graphics-0.4.4.pkg`, and reboot so macOS rebuilds AuxKC cleanly.
+4. **Apply Safe Lid Sleep:** Run `./Utilities/ajustar_sleep_tampa.sh` to prevent broken S3 sleep.
+5. **Verify Runtime Trust & Acceleration:**
+
+```sh
+ioreg -r -c AMFIAnchor -l
+ioreg -r -c AMFIAnchorProvider -l
+kextstat | grep -E 'WhateverXe|AMFI|AppleIntelTGL'
+```
+
+Expected: `InstallStatus = 1`, `AnchorReady = 1`, and `LoadedAnchors` listing `b00t0x` without `AMFIPass` loaded (unless stock `AMFIPass 1.4.1` is explicitly added after `AMFIAnchorInjector.kext` for upstream Dortania OCLP root patches).
 
 ---
 

@@ -1,6 +1,6 @@
 # Status da EFI & Compatibilidade de Hardware
 
-**Samsung Book NP550XDA (`LH43STAR` / `SECCSD`)**  
+**Samsung Book NP550XDA (`LH43STAR` / `SECCSD`) — `v0.0.8` (Pre-release)**  
 *macOS Monterey 12.7.6+ (compatível com Big Sur até Tahoe) • OpenCore 1.0.8 • WhateverXe 0.8.3 + AMFIAnchor 0.1.2 + WhateverXe-Graphics 0.4.4*
 
 ---
@@ -143,11 +143,22 @@ A solução gráfica utilizada nesta EFI é composta por três projetos oficiais
 
 ---
 
-## 4. Recomendações de Uso e Manutenção
+## 4. Recomendações de Uso, Pacote `Pendrive.zip` e Verificação
 
 1. **Transporte do Notebook**:
    * Ao guardar o notebook dentro de mochilas, capas de neoprene ou bolsas fechadas, **desligue o computador** (` > Desligar...`). Como o sistema permanece acordado com a tela desligada ao fechar a tampa, transportá-lo ligado em ambientes sem circulação de ar pode gerar aquecimento indesejado.
-2. **Atualizações do WhateverXe & WhateverXe-Graphics**:
-   * Acompanhe os releases oficiais em [`b00t0x/WhateverXe`](https://github.com/b00t0x/WhateverXe/releases) e [`b00t0x/WhateverXe-Graphics`](https://github.com/b00t0x/WhateverXe-Graphics/releases). Sempre baixe e instale ambos os pacotes correspondentes juntos (o `.pkg` não é armazenado neste repositório devido ao tamanho).
-3. **Estrutura de Arquivos da EFI**:
-   * Sempre mantenha uma cópia de segurança funcional da pasta `/Volumes/EFI/EFI` em um pendrive de boot para contingências antes de atualizar o macOS ou modificar patches.
+2. **Pacote de Release (`Pendrive.zip`) & `WhateverXe-Graphics`**:
+   * O release `v0.0.8` (Pre-release) acompanha o pacote `Pendrive.zip` contendo a pasta `EFI/` atualizada e a pasta `Utilities/` pronta para pós-instalação e diagnóstico (`WhateverXe-Graphics-0.4.4.pkg`, `ProperTree`, `python-3.14.3-macos11.pkg`, `MountEFI`, `ocvalidate 1.0.8`, `macrecovery 1.0.8`, `Hackintool.zip`, `IORegistryExplorer.app`, `DarwinDumper.app`, `AppCleaner.app`, `Intel Power Gadget v3.7.0.dmg`, `Kexts/` com zips OCLP stock incluindo `AMFIPass-v1.4.1-RELEASE.zip`, `Docs/` e os scripts de tampa).
+   * Acompanhe também os releases oficiais em [`b00t0x/WhateverXe`](https://github.com/b00t0x/WhateverXe/releases), [`b00t0x/AMFIAnchor`](https://github.com/b00t0x/AMFIAnchor/releases) e [`b00t0x/WhateverXe-Graphics`](https://github.com/b00t0x/WhateverXe-Graphics/releases) (instaladores `.pkg` grandes permanecem fora do controle de versão Git do repositório).
+3. **Verificação pós-boot (`AMFIAnchor` + `WhateverXe`)**:
+   * Após instalar `WhateverXe-Graphics-0.4.4.pkg` e reiniciar pela EFI atualizada, confirme o carregamento e o registro da âncora CoreTrust `b00t0x` com:
+
+     ```sh
+     ioreg -r -c AMFIAnchor -l
+     ioreg -r -c AMFIAnchorProvider -l
+     kextstat | grep -E 'WhateverXe|AMFI|AppleIntelTGL'
+     ```
+
+   * Em `AMFIAnchor`, `InstallStatus` e `AnchorReady` devem ser `1`, e `LoadedAnchors` deve listar `b00t0x` (`AMFIPass` não deve estar carregada, exceto a versão stock `1.4.1` caso utilize root patches do OCLP oficial da Dortania).
+4. **Cópia de Segurança da EFI**:
+   * Sempre mantenha uma cópia de segurança funcional da pasta `/Volumes/EFI/EFI` em um pendrive de boot antes de atualizar o macOS ou modificar patches.
